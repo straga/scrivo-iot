@@ -1,0 +1,26 @@
+[package]
+name = "automaton"
+version = "0.1.0"
+edition.workspace = true
+description = "The order the burner burns in: the states it passes through, what moves it between them and what it does when something does not add up - readings and seconds in, commands out, and no board anywhere"
+
+[dependencies]
+flame = { workspace = true }
+regulator = { workspace = true }
+# the count of what the automaton lets go of by itself in a local day (relief.rs)
+tally = { workspace = true }
+# how long a count the flash refused waits before it is offered again: the pause the pellets keep (relief.rs)
+pellets = { workspace = true }
+
+[dev-dependencies]
+# the rows of the fire run the real thermostat that orders it (tests/common): a dev-dependency cycle, which cargo allows for tests
+thermostat = { workspace = true }
+# the rows that follow a command from the automaton through the regulator to the gate's decision (tests/boot_air.rs)
+dimmer = { workspace = true }
+draught = { workspace = true }
+# the board's steady clock, which the burner's round takes its seconds by (tests/rows.rs, a leap of the clock)
+between = { workspace = true }
+# the demand the thermostat that orders the fire is told by (tests/demand.rs)
+demand = { workspace = true }
+# the schedule a room's player is told by in the rows of a manual cycle (tests/manual.rs)
+schedule = { workspace = true }

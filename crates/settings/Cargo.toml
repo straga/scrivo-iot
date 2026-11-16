@@ -1,0 +1,10 @@
+[package]
+name = "settings"
+version = "0.1.0"
+edition.workspace = true
+description = "The engine's settings mechanism and its own settings - time servers, time zone, the network: what each is, what it takes, how a stored value is seeded only when empty, carried across a change of meaning and checked - without the hardware and without any module"
+
+[dependencies]
+# a refusal and what a save moved go to the page as a code and its fields (Refusal::wire, Moved::wire)
+serde_json = { workspace = true }
+

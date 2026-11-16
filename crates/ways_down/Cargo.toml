@@ -1,0 +1,14 @@
+[package]
+name = "ways_down"
+version = "0.1.0"
+edition.workspace = true
+description = "Ways down to the recovery image without the network: the hold of the button and three short starts"
+
+[dependencies]
+esp-idf-svc = { workspace = true }
+
+# esp-idf-sys builds the components of the root crate and of its direct dependencies (as crates/vfs)
+[[package.metadata.esp-idf-sys.extra_components]]
+component_dirs = "ways_down"
+bindings_header = "ways_down/bindings.h"
+bindings_module = "ways_down"

@@ -1,0 +1,13 @@
+@import "./tokens.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* **A LEVEL IS ALSO THE HEAVIER WORD, AND THE WEIGHT TRAVELS WITH THE COLOUR.** The dark theme can put a level
+   LIGHTER than the label and be done with it; the light theme cannot go darker without turning green into navy.
+So the colour is spent on being recognisable and the weight carries the
+   emphasis - the same rule in both themes, so neither leans on room the other has not got.
+   It sits here rather than in the page's markup because a level is one thing: ok, bad and warn are not three
+   colours that happen to be important, they ARE the importance. `dim` is left alone - it is the one level whose
+   whole meaning is to step back. */
+.text-ok, .text-bad, .text-warn { font-weight: 600 }

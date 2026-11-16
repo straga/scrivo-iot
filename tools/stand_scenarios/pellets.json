@@ -1,0 +1,7 @@
+{
+  "seconds": 160,
+  "clock": {"start": "mon 23:00", "minutes_a_second": 1},
+  "organs": {
+    "auger": [[5, "on"], [35, "off"], [100, "on"], [120, "off"]]
+  }
+}

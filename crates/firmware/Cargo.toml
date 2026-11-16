@@ -1,0 +1,76 @@
+[package]
+name = "firmware"
+version = "0.1.0"
+edition.workspace = true
+description = "What every device runs: the log, the consoles, the station, the page and its two things"
+
+[dependencies]
+# what the heap holds, by the board
+plan = { workspace = true }
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+round = { workspace = true }
+# the relays' owner waits for a command no longer than a limit runs
+embassy-time = { workspace = true }
+# the setting of the time reaches SNTP's owner by a signal (clock.rs)
+embassy-sync = { workspace = true }
+embedded-io = { workspace = true }
+# a line typed on USB, carried to its shell in the task orders (console.rs)
+heapless = { workspace = true }
+# what a window of samples of an analog pin comes to, and what its round costs the unit (lane_lines, for `status` and the note a silence leaves)
+analog = { workspace = true }
+# what a recorded fall says to a person; the panic_note component below is what records it
+fell_where = { workspace = true }
+journal = { workspace = true }
+daily = { workspace = true }
+# which module says how much; the logger above asks it before it writes a line
+core_load = { workspace = true }
+loudness = { workspace = true }
+shell = { workspace = true }
+# the contract of a module, and the walk of the device's list of them
+module = { workspace = true }
+page = { workspace = true }
+# the owners' desks: a sensor's round is asked for its curves and lines (sensor.rs)
+between = { workspace = true }
+roam = { workspace = true }
+# which access point the next join goes to, and when the radio is reset and the board restarts (net.rs)
+rescue = { workspace = true }
+# what the board calls itself in DHCP and mDNS: the device's name and the tail of its MAC (net.rs)
+board_name = { workspace = true }
+# the addresses of the card every board carries, for a device of contract 3
+dictionary = { workspace = true }
+reset_why = { workspace = true }
+settings = { workspace = true }
+flash = { workspace = true }
+vfs = { workspace = true }
+web = { workspace = true }
+# the answer of the tab's save is a JSON value (orders.rs)
+serde_json = { workspace = true }
+
+# The note a fall leaves in RTC memory. esp-idf-sys builds the components of the root crate and of its direct
+# dependencies: a device that depends on this crate gets the component.
+[[package.metadata.esp-idf-sys.extra_components]]
+component_dirs = "panic_note"
+bindings_header = "panic_note/bindings.h"
+bindings_module = "panic_note"
+
+# The tick of FreeRTOS, ours in place of IDF's: a leap of the systimer's counter resyncs the tick instead of catching up
+# with millions of ticks in the interrupt.
+[[package.metadata.esp-idf-sys.extra_components]]
+component_dirs = "systick"
+bindings_header = "systick/bindings.h"
+bindings_module = "systick"
+
+# mDNS, so that the board answers to its name on the network (net.rs): espressif/mdns 1.3.2, the version of the recovery image and the
+# MicroPython port (scrivo-safe/main/idf_component.yml: newer versions use more resources), taken into the tree and ours
+# (mdns/TAKEN_FROM.md): its periodic timer skips what a leap of the clock made it miss.
+[[package.metadata.esp-idf-sys.extra_components]]
+component_dirs = "mdns"
+
+[features]
+# The rollback check: the station never confirms the image, so the next reset returns the board to
+# factory. A device forwards its own feature of the same name here.
+never-confirm = []
+
+[build-dependencies]
+embuild = { workspace = true }

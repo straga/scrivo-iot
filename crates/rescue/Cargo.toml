@@ -1,0 +1,8 @@
+[package]
+name = "rescue"
+version = "0.1.0"
+edition.workspace = true
+description = "When a station that cannot join resets its radio and then restarts the board - without the radio"
+
+[dependencies]
+roam = { path = "../roam" }

@@ -1,0 +1,44 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition.workspace = true
+description = "The board's network in one loop: the page on port 80 - files from vfs, the dictionary, the state, the commands, /events, the console over a WebSocket - and the console on port 23"
+
+[dependencies]
+# what the heap holds, by the board
+plan = { workspace = true }
+log = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+heapless = { workspace = true }
+page = { workspace = true }
+events = { workspace = true }
+shell = { workspace = true }
+journal = { workspace = true }
+between = { workspace = true }
+embassy-sync = { workspace = true }
+embassy-time = { workspace = true }
+embassy-futures = "0.1"
+embedded-io = { workspace = true }
+embedded-io-async = { workspace = true }
+edge-http = { workspace = true }
+edge-ws = { workspace = true }
+edge-nal = { workspace = true }
+
+# what is of the board: the eventfd, the task and its reactor, the sockets over lwIP
+[target.'cfg(target_os = "espidf")'.dependencies]
+esp-idf-svc = { workspace = true }
+round = { workspace = true }
+edge-nal-std = { workspace = true }
+async-io-mini = { workspace = true }
+
+[dev-dependencies]
+# the loop run on the host over std's sockets, as the board runs it over lwIP's. The reactor is async-io's here:
+# async-io-mini knows Linux and IDF only (eventfd, a sockaddr without sin_len) - the loop sees edge-nal's traits and
+# nothing of either reactor. A clock and a critical section of std.
+edge-nal-std = "0.7"
+log = { workspace = true, features = ["std"] }
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }
+# the CPU a quiet loop takes (tests/quiet.rs)
+libc = "0.2"

@@ -1,0 +1,16 @@
+[package]
+name = "between_leaps"
+version = "0.1.0"
+edition.workspace = true
+description = "Rows of `between` that need the clock of embassy-time moved by hand, as a leap of the chip's counter moves it: the time driver of the board over a counter moved by hand, which cannot share a build with the std one that `between`'s own rows use"
+publish = false
+
+# Test with `cargo test -p between_leaps`, alone: `--workspace` puts the std driver and this one into one build, and two
+# drivers do not link.
+[dependencies]
+between = { workspace = true }
+
+[dev-dependencies]
+embassy-time = { workspace = true }
+embassy-time-driver = { workspace = true }
+critical-section = { version = "1", features = ["std"] }

@@ -1,0 +1,15 @@
+[package]
+name = "flash"
+version = "0.1.0"
+edition.workspace = true
+description = "The owner of the board's flash: the settings saved and the modules' memory written down by one task, asked at its desk, and the set of settings as it stands published whole to every reader"
+
+[dependencies]
+between = { workspace = true }
+module = { workspace = true }
+settings = { workspace = true }
+
+[dev-dependencies]
+# on the host the desk waits by embassy-time, and std gives its clock; the channels' lock is a critical section
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }

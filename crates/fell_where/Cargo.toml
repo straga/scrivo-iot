@@ -1,0 +1,5 @@
+[package]
+name = "fell_where"
+version = "0.1.0"
+edition.workspace = true
+description = "What a recorded fall says to a person: where the board faulted, what the chip called it, and whether the note belongs to this start"

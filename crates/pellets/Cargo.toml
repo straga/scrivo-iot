@@ -1,0 +1,8 @@
+[package]
+name = "pellets"
+version = "0.1.0"
+edition.workspace = true
+description = "Pellets counted from the seconds the auger turns: grams by the rate a person weighed, today, this month and in all, the snapshot that outlives a power cut - without the hardware"
+
+[dependencies]
+tally.workspace = true

@@ -1,0 +1,108 @@
+carry: gains under the old unit, one set
+  said setting up_kp carried to meaning 1: 30 is now 150
+  said setting up_ki carried to meaning 1: 9 is now 45
+  said setting down_kp carried to meaning 1: 30 is now 150
+  said setting down_ki carried to meaning 1: 6 is now 30
+  store settings: up_kp=150 | up_ki=45 | down_kp=150 | down_ki=30 | draught_pa=31 | fan_step=5 | @meaning=5
+  again 0
+carry: a gain nobody can carry
+  said setting up_kp could not be carried from 'nonsense' to meaning 1: it reads its default 300
+  said setting up_ki carried to meaning 1: 9 is now 45
+  said setting down_kp carried to meaning 1: 30 is now 150
+  said setting down_ki carried to meaning 1: 6 is now 30
+  store settings: up_kp=300 | up_ki=45 | down_kp=150 | down_ki=30 | @meaning=5
+  again 0
+carry: a gain past the span is clamped
+  said setting up_ki carried to meaning 1: 9 is now 45
+  said setting down_kp carried to meaning 1: 30 is now 150
+  said setting down_ki carried to meaning 1: 6 is now 30
+  store settings: up_kp=2000 | up_ki=45 | down_kp=150 | down_ki=30 | @meaning=5
+  again 0
+carry: a role kept as water
+  said setting role_ntc_1 carried to meaning 2: water is now supply
+  store settings: role_ntc_1=supply | role_ntc_2=supply | role_ntc_3=own:tank | @meaning=5
+  again 0
+carry: nothing kept
+  again 0
+carry: a pair that is the defaults of another step
+  said setting auto_step carried from the pair: 3
+  store s.automaton: auto_hold=boiler | auto_step=3 | auto_pa=11 | auto_feed_on_s=1 | auto_feed_off_s=21 | @meaning=5
+  again 0
+carry: a pair that is the defaults of the step chosen
+  store s.automaton: auto_hold=boiler | auto_step=3 | auto_pa=11 | auto_feed_on_s=1 | auto_feed_off_s=21 | @meaning=5
+  again 0
+carry: a pair in a hold of power
+  store s.automaton: auto_hold=power | auto_step=6 | auto_pa=11 | auto_feed_on_s=1 | auto_feed_off_s=21 | @meaning=5
+  again 0
+carry: a pair that is no step's, into the step chosen
+  said setting auto_6_pa carried from auto_pa: 44
+  said setting auto_6_on_s carried from auto_feed_on_s: 7
+  said setting auto_6_off_s carried from auto_feed_off_s: 25
+  store s.automaton: auto_hold=boiler | auto_step=6 | auto_pa=44 | auto_feed_on_s=7 | auto_feed_off_s=25 | auto_6_pa=44 | auto_6_on_s=7 | auto_6_off_s=25 | @meaning=5
+  again 0
+carry: a step a person set is not written over
+  store s.automaton: auto_hold=boiler | auto_step=6 | auto_3_pa=19 | auto_pa=11 | auto_feed_on_s=1 | auto_feed_off_s=21 | @meaning=5
+  again 0
+carry: meaning 3 with the pair put aside
+  said setting auto_step carried from the pair held in 6 kW: 3
+  store s-left: auto_pa=11 | auto_feed_on_s=1 | auto_feed_off_s=21
+  store s.automaton: auto_hold=boiler | auto_step=3 | auto_6_pa=22 | auto_6_on_s=2 | auto_6_off_s=21 | @meaning=5
+  again 0
+save: a mode by the boiler with no socket playing it
+  refused no_socket / {"code":"no_socket","name":"auto_hold","role":"boiler"} / auto_hold: no socket measures water in the boiler; give one that role first
+  now auto_hold=power
+save: the role and the mode in one save
+  moved role_ntc_1=boiler
+  now auto_hold=boiler, role_ntc_1=boiler
+save: a mode by the return with another role set
+  refused no_socket / {"code":"no_socket","name":"auto_hold","role":"return"} / auto_hold: no socket measures water coming back; give one that role first
+  now auto_hold=boiler, role_ntc_2=boiler
+save: the room that asks with no socket
+  refused no_socket / {"code":"no_socket","name":"auto_asked_by","role":"room"} / auto_asked_by: no socket measures the boiler room; give one that role first
+  now auto_asked_by=none
+save: the room that asks with its socket in the same save
+  moved role_ntc_4=room, auto_asked_by=room
+  now auto_asked_by=room, role_ntc_4=room
+save: the schedule asks
+  moved auto_asked_by=schedule
+  now auto_asked_by=schedule
+save: a level of power
+  moved auto_hold=power
+  now auto_hold=power
+save: a mode kept and saved as it stood is not asked again
+  moved 
+  now auto_hold=boiler
+save: a city kept for the zone, saved as the zone
+  moved 
+  now zone=gmt+2
+save: a setting nobody has
+  refused no_setting / {"code":"no_setting","name":"nonsense"} / there is no setting 'nonsense'
+  now 
+save: a mode that is none
+  refused none_of / {"choices":["power","boiler","return"],"code":"none_of","name":"auto_hold","text":"nonsense"} / auto_hold: 'nonsense' is none of power, boiler, return
+  now auto_hold=boiler
+save: a refusal in the middle of a save changes nothing
+  refused no_socket / {"code":"no_socket","name":"auto_hold","role":"return"} / auto_hold: no socket measures water coming back; give one that role first
+  now auto_hold=boiler, fan_step=5
+zone kept kyiv: value gmt+2, words GMT+2, posix EET-2EEST,M3.5.0/3,M10.5.0/4
+zone kept riga: value gmt+2, words GMT+2, posix EET-2EEST,M3.5.0/3,M10.5.0/4
+zone kept warsaw: value gmt+1, words GMT+1, posix CET-1CEST,M3.5.0,M10.5.0/3
+zone kept london: value gmt, words GMT, posix GMT0BST,M3.5.0/1,M10.5.0
+zone kept istanbul: value gmt+3, words GMT+3, posix <+03>-3
+zone kept gmt+3: value gmt+3, words GMT+3, posix <+03>-3
+zone kept nonsense: value gmt+2, words GMT+2, posix EET-2EEST,M3.5.0/3,M10.5.0/4
+role_words boiler: water in the boiler
+role_words supply: water leaving the boiler
+role_words return: water coming back
+role_words room: the boiler room
+role_words free: nothing plugged in
+role_words own:tank: tank
+role_words own:: own:
+role_words nonsense: nonsense
+plays boiler: true
+plays return: false
+plays room: false
+plays supply: false
+plays own:tank: true
+plays free: true
+auto_hold default boiler

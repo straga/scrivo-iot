@@ -1,0 +1,5 @@
+[package]
+name = "plan"
+version = "0.1.0"
+edition.workspace = true
+description = "What the image keeps in its heap, by the board it runs on: the sizes of the buffers and stacks a board with external RAM may spend, and the smaller ones for a board whose internal RAM is all it has"

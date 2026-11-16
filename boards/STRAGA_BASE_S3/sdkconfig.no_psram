@@ -1,0 +1,6 @@
+# The S3 base board built WITHOUT its PSRAM (tools/board_env.py, variant no_psram): read in place of sdkconfig.defaults
+# of this folder. The Sonoff Dual's classic ESP32 has no external RAM, its internal heap is the whole heap,
+# and the S3 on the bench with the two megabytes off stands in for it - the same few hundred kilobytes of internal RAM -
+# while it is flashed by wire as often as the work needs. Never for the board's own use: its memory is the reason the
+# burner's numbers are what they are.
+# CONFIG_SPIRAM is not set

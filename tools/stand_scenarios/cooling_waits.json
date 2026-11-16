@@ -1,0 +1,151 @@
+{
+ "about": "The burner is not lit again by the thermostat before the wait is up: Start at 2 s, the water climbs to 60.5 at 400 s and the fire smouldering from 394 s burns out by itself (the flame goes dark at 490 s) and stops at 567 s; the water cools through the line of 56 at about 495 s to 50 at 620 s. The wait is 4 minutes (auto_lock_min): the card counts 240 down from 568 s, the order is Keep where it would be Burn, and the fire is lit again at 808 s (the flame is back at 871 s). The same run with no wait lights it at once, a Start in the middle of the wait lights it then, and water under the floor lights it when it crosses it.",
+ "seconds": 1000,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   480,
+   900
+  ],
+  [
+   490,
+   3150
+  ],
+  [
+   870,
+   3150
+  ],
+  [
+   871,
+   1800
+  ],
+  [
+   880,
+   1800
+  ],
+  [
+   881,
+   900
+  ],
+  [
+   1000,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   150,
+   40
+  ],
+  [
+   400,
+   60.5
+  ],
+  [
+   620,
+   50
+  ],
+  [
+   1000,
+   50
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   400,
+   120
+  ],
+  [
+   500,
+   40
+  ],
+  [
+   860,
+   35
+  ],
+  [
+   900,
+   120
+  ],
+  [
+   1000,
+   125
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   66
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   50
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "60",
+  "auto_step": "6",
+  "auto_lock_min": "4"
+ }
+}

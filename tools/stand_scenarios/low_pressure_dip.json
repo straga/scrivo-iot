@@ -1,0 +1,62 @@
+{
+  "about": "lighting.json, and the draught sensor answers under its own zero for 6 s in the climb, after the fan has had its spin-up: the dip comes back inside its term (20 s), and the fire goes on.",
+  "seconds": 330,
+  "press": [
+    [
+      2,
+      "start"
+    ]
+  ],
+  "flame_mv": [
+    [
+      0,
+      3150
+    ],
+    [
+      94,
+      3150
+    ],
+    [
+      95,
+      1800
+    ],
+    [
+      104,
+      1800
+    ],
+    [
+      105,
+      900
+    ]
+  ],
+  "boiler_c": [
+    [
+      0,
+      38
+    ],
+    [
+      330,
+      52
+    ]
+  ],
+  "flue_c": [
+    [
+      0,
+      24
+    ],
+    [
+      100,
+      30
+    ],
+    [
+      330,
+      120
+    ]
+  ],
+  "draught_under": [
+    [
+      140,
+      145
+    ]
+  ]
+}

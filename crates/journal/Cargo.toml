@@ -1,0 +1,16 @@
+[package]
+name = "journal"
+version = "0.1.0"
+edition = "2021"
+description = "The board's log on its way to its readers: a channel of fixed size from the tasks that log, a ring for the consoles, the journal kept on flash"
+
+[dependencies]
+# the lock under the channel between the tasks that log and the one that reads, a FreeRTOS mutex on the board
+between = { workspace = true }
+embassy-sync = { workspace = true }
+heapless = { workspace = true }
+
+[dev-dependencies]
+# a critical section of std under the channel's lock on the host; on the board the lock is a FreeRTOS mutex
+critical-section = { version = "1", features = ["std"] }
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }

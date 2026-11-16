@@ -1,0 +1,8 @@
+[package]
+name = "demand"
+version = "0.1.0"
+edition.workspace = true
+description = "Who asks the boiler for heat, cold or warm, and why: the word of the demand and the players of its role - the room against its target, the schedule against the clock - readings in, a word out, and no board anywhere"
+
+[dependencies]
+schedule = { workspace = true }

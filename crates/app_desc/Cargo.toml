@@ -1,0 +1,8 @@
+[package]
+name = "app_desc"
+version = "0.1.0"
+edition.workspace = true
+description = "esp_app_desc_t of a device image: its version and our project name"
+
+[dependencies]
+esp-idf-svc = { workspace = true }

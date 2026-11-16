@@ -1,0 +1,15 @@
+[package]
+name = "vfs"
+version = "0.1.0"
+edition.workspace = true
+description = "The board's vfs partition, LittleFS v2, opened the way the recovery image opens it"
+
+[dependencies]
+esp-idf-svc = { workspace = true }
+
+# esp-idf-sys builds the components of the root crate and of its direct dependencies: a device that depends on
+# this crate gets the component.
+[[package.metadata.esp-idf-sys.extra_components]]
+component_dirs = "app_fs"
+bindings_header = "app_fs/bindings.h"
+bindings_module = "app_fs"

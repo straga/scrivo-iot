@@ -1,0 +1,15 @@
+[package]
+name = "loudness"
+version = "0.1.0"
+edition.workspace = true
+description = "How loud each module of the board is: what goes to the console by default, and what a person turns on by name"
+
+[dependencies]
+# the lock under the published table, a FreeRTOS mutex on the board; the channel of names the table has not seen
+between = { workspace = true }
+embassy-sync = { workspace = true }
+journal = { workspace = true }
+
+[dev-dependencies]
+# a critical section of std under the lock on the host; on the board the lock is a FreeRTOS mutex
+critical-section = { version = "1", features = ["std"] }

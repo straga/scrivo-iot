@@ -1,0 +1,8 @@
+[package]
+name = "mains"
+version = "0.1.0"
+edition.workspace = true
+description = "What the burner does with the reading of its socket: the address the setting names, and the line the journal gets when an organ switched and the mains power moved with it"
+
+[dependencies]
+tasmota = { path = "../tasmota" }

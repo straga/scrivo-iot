@@ -1,0 +1,9 @@
+# Sonoff Dual R3 (v2, BL0939) on a classic ESP32-D0WD-V3, 4 MB flash: what it gives a Rust image. The
+# partition table and the bootloader options are the board's one set for every image on it and live in
+# scrivo-safe; flash size, frequency and mode are read from that bootloader.sdkconfig.
+target = "xtensa-esp32-espidf"
+mcu = "esp32"
+# the board's folder inside scrivo-safe (tools/board_env.py, `scrivo_safe`)
+safe = "boards/SONOFF_DUAL_R3"
+# the classic ESP32 of the Dual has no external RAM: its internal heap is the whole heap, and an image that asks for PSRAM aborts at the start
+psram = false

@@ -1,0 +1,13 @@
+[package]
+name = "burner_map"
+version = "0.1.0"
+edition.workspace = true
+description = "What the burner reads: the map of its readings, and every size counted from that map rather than written beside it"
+
+[dev-dependencies]
+settings = { workspace = true }
+
+[dependencies]
+modbus = { workspace = true }
+settings = { workspace = true }
+burner_settings = { workspace = true }

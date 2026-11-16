@@ -1,0 +1,89 @@
+# Boards, devices and what they share. A device is built with tools/build.sh <device>:
+# its board (boards/<board>/board.toml) gives the target, the MCU and the IDF files; see README.md.
+[workspace]
+resolver = "2"
+members = ["crates/*", "devices/*", "devices/burner/api", "devices/burner/settings", "devices/bench_dualr3/api", "devices/bench_s3/api"]
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.82"
+
+[workspace.dependencies]
+log = "0.4"
+esp-idf-svc = "0.53"
+embedded-io = "0.6.1"
+embuild = "0.33.5"
+serde = { version = "1", features = ["derive"] }
+embassy-sync = "0.8"
+embassy-time = "0.5"
+embassy-time-driver = { version = "0.2", features = ["tick-hz-1_000_000"] }
+serde_json = "1"
+# The network's one loop: HTTP and WebSocket over std sockets made async by async-io-mini - one reactor
+# thread with a small stack for the whole program, instead of async-io's, which wants 8 KB from every poller.
+edge-http = { version = "0.8", default-features = false, features = ["std"] }
+edge-ws = { version = "0.8", default-features = false, features = ["std"] }
+edge-nal = "0.7"
+edge-nal-std = { version = "0.7", features = ["async-io-mini"] }
+async-io-mini = "0.4"
+embedded-io-async = "0.7"
+# text of fixed length in a value (page::dictionary::Text), so a value is copied without the heap
+heapless = "0.9"
+app_desc = { path = "crates/app_desc" }
+automaton = { path = "crates/automaton" }
+automaton_card = { path = "crates/automaton_card" }
+bl0939 = { path = "crates/bl0939" }
+burner_map = { path = "crates/burner_map" }
+core_load = { path = "crates/core_load" }
+burner_settings = { path = "devices/burner/settings" }
+burner_api = { path = "devices/burner/api" }
+energy = { path = "crates/energy" }
+journal = { path = "crates/journal" }
+loudness = { path = "crates/loudness" }
+dimmer = { path = "crates/dimmer" }
+analog = { path = "crates/analog" }
+board_name = { path = "crates/board_name" }
+curve = { path = "crates/curve" }
+dictionary = { path = "crates/dictionary" }
+draught = { path = "crates/draught" }
+flame = { path = "crates/flame" }
+max6675 = { path = "crates/max6675" }
+modbus = { path = "crates/modbus" }
+module = { path = "crates/module" }
+events = { path = "crates/events" }
+fell_where = { path = "crates/fell_where" }
+flash = { path = "crates/flash" }
+firmware = { path = "crates/firmware" }
+round = { path = "crates/round" }
+soot = { path = "crates/soot" }
+page = { path = "crates/page" }
+pellets = { path = "crates/pellets" }
+regulator = { path = "crates/regulator" }
+relay = { path = "crates/relay" }
+reset_why = { path = "crates/reset_why" }
+plan = { path = "crates/plan" }
+settings = { path = "crates/settings" }
+shell = { path = "crates/shell" }
+switch = { path = "crates/switch" }
+tally = { path = "crates/tally" }
+thermostat = { path = "crates/thermostat" }
+daily = { path = "crates/daily" }
+schedule = { path = "crates/schedule" }
+demand = { path = "crates/demand" }
+between = { path = "crates/between" }
+roam = { path = "crates/roam" }
+rescue = { path = "crates/rescue" }
+version = { path = "crates/version" }
+vfs = { path = "crates/vfs" }
+ways_down = { path = "crates/ways_down" }
+web = { path = "crates/web" }
+
+[profile.release]
+opt-level = "s"
+# Line tables, so that an address the board prints after a fall becomes a file and a line
+# (tools/where_fell.py). They live in the ELF and never in the image - the board carries nothing for them -
+# and without them a trace names functions and no lines, which is one guess short of the place.
+debug = "line-tables-only"
+
+[profile.dev]
+debug = true    # Symbols are nice, and they don't increase the size on Flash
+opt-level = "z"

@@ -1,0 +1,28 @@
+[package]
+name = "module"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "The contract of a device's module - its rows, actions, settings, notes, curves and console lines - and the walk of a device's list of modules that answers for all of them"
+
+[dependencies]
+page = { workspace = true }
+settings = { workspace = true }
+# the card its owner publishes, copied to every reader (card.rs)
+embassy-sync = { workspace = true }
+# the lock under the channels between tasks: a FreeRTOS mutex on the board
+between = { workspace = true }
+heapless = { workspace = true }
+
+[dev-dependencies]
+# on the host the owners' desks (between) wait by embassy-time, and std gives its clock
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+# on the host the channels' lock is a critical section (between), and std gives it
+critical-section = { version = "1", features = ["std"] }
+serde_json = { workspace = true }
+
+[target.'cfg(target_os = "espidf")'.dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+round = { workspace = true }
+web = { workspace = true }

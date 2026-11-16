@@ -1,0 +1,190 @@
+{
+ "about": "The house is warm, the burner stops and the thermostat counts the wait of 4 minutes (auto_lock_min); in the wait the room falls to 19 at 420 s and the house asks for heat again: the burner stands and the line over the drawing says it waits - heat is asked, the fire is out, the wait is counted - and not that it heats. Start stays lit: the switch is on.",
+ "seconds": 900,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   95,
+   3150
+  ],
+  [
+   96,
+   1800
+  ],
+  [
+   105,
+   1800
+  ],
+  [
+   106,
+   900
+  ],
+  [
+   310,
+   900
+  ],
+  [
+   320,
+   3150
+  ],
+  [
+   400,
+   3150
+  ],
+  [
+   496,
+   3150
+  ],
+  [
+   497,
+   1800
+  ],
+  [
+   506,
+   1800
+  ],
+  [
+   507,
+   900
+  ],
+  [
+   640,
+   900
+  ],
+  [
+   900,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   150,
+   55
+  ],
+  [
+   200,
+   55
+  ],
+  [
+   640,
+   50
+  ],
+  [
+   900,
+   50
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   320,
+   60
+  ],
+  [
+   500,
+   40
+  ],
+  [
+   560,
+   120
+  ],
+  [
+   640,
+   125
+  ],
+  [
+   900,
+   125
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   55
+  ],
+  [
+   900,
+   55
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   45
+  ],
+  [
+   900,
+   45
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ],
+  [
+   199,
+   18
+  ],
+  [
+   200,
+   22
+  ],
+  [
+   419,
+   22
+  ],
+  [
+   420,
+   19
+  ],
+  [
+   900,
+   19
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "90",
+  "auto_step": "6",
+  "auto_asked_by": "room",
+  "auto_room_c": "21",
+  "auto_room_gap_c": "1",
+  "auto_lock_min": "4"
+ }
+}

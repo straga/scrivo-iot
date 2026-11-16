@@ -1,0 +1,121 @@
+{
+  "about": "The house asks by the schedule alone and nobody presses Light: Start at 2 s leaves the burner standing while the house is warm (the profile is off), and the window of 22:00 at 200 s makes the house cold, so the fire lights by the schedule. The reasons `scheduled_off` and `scheduled_on` stand on frames of the house and of no cycle of a person's.",
+  "seconds": 640,
+  "press": [
+    [
+      2,
+      "start"
+    ]
+  ],
+  "clock": {
+    "start": "mon 12:00",
+    "minutes_a_second": 3
+  },
+  "flame_mv": [
+    [
+      0,
+      3150
+    ],
+    [
+      95,
+      3150
+    ],
+    [
+      96,
+      1800
+    ],
+    [
+      105,
+      1800
+    ],
+    [
+      106,
+      900
+    ],
+    [
+      460,
+      900
+    ],
+    [
+      470,
+      3150
+    ],
+    [
+      640,
+      3150
+    ]
+  ],
+  "boiler_c": [
+    [
+      0,
+      40
+    ],
+    [
+      640,
+      45
+    ]
+  ],
+  "flue_c": [
+    [
+      0,
+      24
+    ],
+    [
+      100,
+      30
+    ],
+    [
+      250,
+      120
+    ],
+    [
+      470,
+      60
+    ],
+    [
+      640,
+      40
+    ]
+  ],
+  "supply_c": [
+    [
+      0,
+      36
+    ],
+    [
+      640,
+      40
+    ]
+  ],
+  "return_c": [
+    [
+      0,
+      30
+    ],
+    [
+      640,
+      35
+    ]
+  ],
+  "room_c": [
+    [
+      0,
+      18
+    ],
+    [
+      640,
+      18
+    ]
+  ],
+  "settings": {
+    "role_ntc_1": "boiler",
+    "role_ntc_2": "supply",
+    "role_ntc_3": "return",
+    "role_ntc_4": "room",
+    "auto_smoulder_s": "90",
+    "auto_step": "6",
+    "auto_asked_by": "schedule",
+    "auto_profile": "off",
+    "window_1": "set:daily 22:00-06:00 comfort"
+  }
+}

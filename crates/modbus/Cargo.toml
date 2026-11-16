@@ -1,0 +1,5 @@
+[package]
+name = "modbus"
+version = "0.1.0"
+edition.workspace = true
+description = "Modbus RTU as the master of the burner's bus speaks it: the frames it sends, what an answer means and what one asking came to. No hardware and no crates - all of it is tested on the computer"

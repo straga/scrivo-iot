@@ -1,0 +1,72 @@
+[package]
+name = "bench_dualr3"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "Sonoff Dual R3 on the bench: network, confirmation, the page, the log and the shell on TCP port 23, the status LED"
+
+[package.metadata.rust_app]
+board = "SONOFF_DUAL_R3"
+# the Dual R3 closes its relays on high: the level its firmware has driven them with
+relays_close_on = "high"
+
+# What hangs on which pin, named by the box: relay1 is L1, switch1 is S1.
+# tools/board_env.py checks each against boards/SONOFF_DUAL_R3/board.yml and hands it to build.rs.
+[package.metadata.rust_app.pins]
+relay1 = "GPIO14"
+relay2 = "GPIO27"
+switch1 = "GPIO33"
+switch2 = "GPIO32"
+# the BL0939 energy meter on UART2, 4800 baud: TX of the board to the meter, RX from it
+meter_tx = "GPIO25"
+meter_rx = "GPIO26"
+
+# What the settings changed in place start from on a board whose nvs has none (crates/settings; checked by build.rs).
+# A value set on the board's page stays: a new image seeds only what is empty.
+[package.metadata.rust_app.settings]
+time = "auto"
+zone = "gmt+2"
+rows = "60"
+keep = "12"
+
+[[bin]]
+name = "bench_dualr3"
+harness = false
+
+[dependencies]
+log = { workspace = true }
+# block_on: a future waited on by a task, its weight held at build time
+between = { workspace = true }
+# critical-section: crates/events waits on an embassy_sync Watch with a timeout
+esp-idf-svc = { workspace = true, features = ["critical-section", "embassy-sync"] }
+# the timers of the network loop, the sensors and the desks: the time driver is `between::steady_time`, and its queue has
+# a place per waiting task
+embassy-time = { workspace = true }
+app_desc = { workspace = true }
+bl0939 = { workspace = true }
+energy = { workspace = true }
+bench_dualr3_api = { path = "api" }
+firmware = { workspace = true }
+module = { workspace = true }
+page = { workspace = true }
+relay = { workspace = true }
+settings = { workspace = true }
+switch = { workspace = true }
+# the energy's count and CSV (count.rs); and esp-idf-sys builds the IDF components of the root crate and of its direct
+# dependencies only - vfs carries app_fs, which firmware needs
+vfs = { workspace = true }
+ways_down = { workspace = true }
+web = { workspace = true }
+
+[features]
+# The rollback check: an image that runs and never confirms itself. Not for the board's own use.
+never-confirm = ["firmware/never-confirm"]
+
+[build-dependencies]
+embuild = { workspace = true }
+dictionary = { workspace = true }
+bench_dualr3_api = { path = "api" }
+settings = { workspace = true }
+# the flag that puts the panic_note component in front of the chip's panic handler
+fell_where = { workspace = true }
+version = { workspace = true }

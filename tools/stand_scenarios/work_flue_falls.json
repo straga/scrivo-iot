@@ -1,0 +1,60 @@
+{
+ "about": "Lit as in lighting.json, working from 155 s, and the flue is 77 degrees and falls a degree a minute, as it fell on 26.09 17:32 when the pellets ran out: ten degrees under the highest of ten minutes is no fuel, and the fire is burnt off before the twelfth minute of work under a weak flame (6.17); the flue is asked of a flame that is not steady (6.6, 6.17).",
+ "seconds": 900,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   1800
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   900,
+   52
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   155,
+   77
+  ],
+  [
+   900,
+   64.58333333333333
+  ]
+ ]
+}

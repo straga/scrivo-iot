@@ -1,0 +1,9 @@
+{
+  "about": "Pellets already in the pot: Start at 2 s, the feed banned at the tenth second of the first dose, the flame never shows; the attempts run without a dose to the fault. Stop at the end.",
+  "seconds": 900,
+  "press": [[2, "start"], [880, "stop"]],
+  "feed": [[43, false]],
+  "flame_mv": [[0, 3150]],
+  "boiler_c": [[0, 38], [900, 38]],
+  "flue_c": [[0, 24], [900, 24]]
+}

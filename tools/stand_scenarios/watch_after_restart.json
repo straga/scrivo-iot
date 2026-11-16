@@ -1,0 +1,87 @@
+{
+ "about": "Lit as in lighting.json and at work; the board comes up again at 250 s over a dark pot and remembers work: it waits under watch with the auger standing, and the watch has no number while the flame is dark. The flame shows 256-259 s and the watch counts 9 down to 6; a dark second at 260 takes the count away, and the flame from 261 s is watched its whole again.",
+ "seconds": 300,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "restart": [
+  250
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   249,
+   900
+  ],
+  [
+   250,
+   3150
+  ],
+  [
+   255,
+   3150
+  ],
+  [
+   256,
+   900
+  ],
+  [
+   259,
+   900
+  ],
+  [
+   260,
+   3150
+  ],
+  [
+   261,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   300,
+   52
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   300,
+   120
+  ]
+ ]
+}

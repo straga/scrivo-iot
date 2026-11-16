@@ -1,0 +1,43 @@
+[package]
+name = "burner_api"
+version = "0.1.0"
+edition.workspace = true
+description = "What the burner says outward: the dictionary of its entities, by layer a crate of its own so that it cannot reach the hardware or the page"
+
+[dependencies]
+relay = { workspace = true }
+page = { workspace = true }
+dictionary = { workspace = true }
+settings = { workspace = true }
+burner_settings = { workspace = true }
+# the logic the flame is given names for, and the window of samples its pin is read in
+flame = { workspace = true }
+analog = { workspace = true }
+# the logic the temperatures and the flue are given names for: what a channel of the bus came to, how a round of the bus went, what a word of the chip is
+burner_map = { workspace = true }
+modbus = { workspace = true }
+max6675 = { workspace = true }
+# what the draught's pin means through its divider
+draught = { workspace = true }
+# the logic the fan is given names for: what the regulator decided, how a percent of air becomes an angle, what turning each knob does
+regulator = { workspace = true }
+dimmer = { workspace = true }
+# the logic the automaton is given names for: what it did in a second, why it broke, which clock counts, the numbers it burns by
+automaton = { workspace = true }
+thermostat = { workspace = true }
+# who asks for heat, and the profiles by the clock the demand's rows are given names for
+demand = { workspace = true }
+schedule = { workspace = true }
+
+[dev-dependencies]
+# the board's own silence of a sensor's role, on the host, as the automaton's frames read it (examples/burner_frames.rs)
+module = { workspace = true }
+between = { workspace = true }
+serde_json = { workspace = true }
+# the machine the organs' states come from, run on the computer by the rows and by the stand's frames
+# the count of pellets the board runs, played by the stand's frames on the auger's seconds of the scenario
+pellets = { workspace = true }
+# on the host: a critical section of std under the machine's channels, as crates/relay's own rows have
+critical-section = { version = "1", features = ["std"] }
+# on the host the machine's desk waits by embassy-time, and std gives its clock
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }

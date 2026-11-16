@@ -1,0 +1,12 @@
+[package]
+name = "thermostat"
+version = "0.1.0"
+edition.workspace = true
+description = "Whether heat is needed and on which level: the held water against the setpoint and its hysteresis, and a person's Start and Stop, said as the order the burner's fire carries out - readings in, an order out, and no board anywhere"
+
+[dependencies]
+automaton = { workspace = true }
+demand = { workspace = true }
+
+[dev-dependencies]
+schedule = { workspace = true }

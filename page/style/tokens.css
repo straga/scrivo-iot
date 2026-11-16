@@ -1,0 +1,58 @@
+/* The colours of the device page, taken as they are from scrivo-iot/devices/burner/page/index.html: the same
+   tokens, the same dark theme by [data-t]. Tailwind reads them by name through tailwind.config.js.
+
+   THE RULES THESE NUMBERS ANSWER TO are held by tools/test_page_depth.py, with the number each one is measured by.
+
+   THE TWO THEMES BUILD DEPTH BY DIFFERENT MEANS, and that is the whole of the light one. In the dark theme
+   every level is LIGHTER than the one under it - the card lighter than the page, the floor of a graph lighter
+   than the card - and the eye reads a stack. Turned the other way round, each level a shade darker than a
+   beige page, it gave four browns a few per cent apart: on 21.09 the edge of a graph, the buttons and the
+   fields could not be found on the light theme at all.
+
+   So here the depth is carried by EDGES AND A SHADOW rather than by a slide of brightness. The card stays warm
+   beige: whitening it was tried on 21.09 and the owner said no - what was unreadable was the text and the
+   fields, and those are fixed by the line and by the ink, not by bleaching the card. tools/test_page_depth.py
+   measures what the depth is actually built from. */
+:root {
+  --bg: #F1EDE0; --panel: #F8F5EC; --sunk: #E8E3D3; --line: rgba(31,47,72,.28);
+  /* **ON LIGHT PAPER THE LABEL STEPS BACK BY BEING MUCH LIGHTER THAN THE VALUE.** Dark ink on a light card all
+     reads as "ink": at 23 L* apart - plenty in the dark theme, where light text glows - label and value are one
+     text. The label takes the dark theme's blue-grey, 41 L* above the value and 2.86 to the card: paler reads
+     as fog, nearer to the value leans on it. tools/test_page_depth.py holds both edges. */
+  --ink: #1F2F48; --dim: #8992A8; --acc: #2D4490; --acc-ink: #F6F3E9; --acc-soft: rgba(45,68,144,.12);
+  /* **A LEVEL HAS TO BE READ AS A COLOUR FIRST, AND ONLY THEN AS EMPHASIS.** Two goes at this were wrong in
+     opposite directions, and both were measured on the live board. Picked against the card alone, the three sat
+     exactly on the row's own label in lightness and said nothing (warn L*42, label L*42). Pushed DOWN in
+     lightness to separate them, they lost their hue instead: green landed at chroma 25 against ink's own 18 and
+     read as dark navy - the owner saw it on the wifi line, which is green in the dark theme and merged into the
+     text here.
+     The dark theme does both at once because it has room: its label is chroma 13 and its colours 27-51, and
+     they are LIGHTER than the label as well. A light theme has no such room - lightness runs into mud - so
+     emphasis is carried by WEIGHT, and the colour is spent on being recognisable. These are the 800 steps of a
+     scale built for text on light ground, which is where their numbers come from rather than from our taste:
+     chroma 41-61 at L*33-37, five to nine below the label, contrast to the card 6.5-7.6.
+     tools/test_page_depth.py holds both halves and refuses every value this note is about. */
+  --warn: #9A3412; --ok: #15602F; --bad: #991B1B;
+  /* THE ARROWS OF THE WATER'S FLOW: the supply warm, from the boiler, the return cold, to it. Muted, and neither is a level's colour: an arrow in `bad` or `warn` would look like a refusal for ever, and an arrow does
+     not change with the state of the burner. Seen on the card, contrast 3.8 and over (REF_Device_Page_Look, rule 18). */
+  --flow-hot: #A8674A; --flow-cold: #3A7F99;
+  --shadow-card: 0 1px 2px rgba(31,47,72,.06), 0 2px 8px rgba(31,47,72,.05);
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-t=l]) {
+    --bg: #131B2B; --panel: #1B2537; --sunk: #243049; --line: rgba(233,228,213,.16);
+    --ink: #E9E4D5; --dim: #99A2B8; --acc: #8CA2E8; --acc-ink: #10182A; --acc-soft: rgba(140,162,232,.14);
+    --warn: #EDB562; --ok: #8BCBA1; --bad: #F5A096;
+  --flow-hot: #B07257; --flow-cold: #4A93B5;
+    --shadow-card: none;
+  }
+}
+:root[data-t=d] {
+  --bg: #131B2B; --panel: #1B2537; --sunk: #243049; --line: rgba(233,228,213,.16);
+  --ink: #E9E4D5; --dim: #99A2B8; --acc: #8CA2E8; --acc-ink: #10182A; --acc-soft: rgba(140,162,232,.14);
+  --warn: #EDB562; --ok: #8BCBA1; --bad: #F5A096;
+  --flow-hot: #B07257; --flow-cold: #4A93B5;
+  --shadow-card: none;
+}

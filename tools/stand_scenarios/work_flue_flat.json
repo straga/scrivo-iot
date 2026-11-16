@@ -1,0 +1,56 @@
+{
+ "about": "Lit as in lighting.json, working from 155 s, and the flue stands at 60 degrees at work: under 70 for the whole window of ten minutes, the fuel is given up on at about 755 s under a weak flame (6.17); the flue is asked of a flame that is not steady (6.6, 6.17).",
+ "seconds": 800,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   1800
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   800,
+   52
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   155,
+   60
+  ],
+  [
+   800,
+   60
+  ]
+ ]
+}

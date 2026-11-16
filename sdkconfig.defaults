@@ -1,0 +1,98 @@
+# Rust often needs a bit of an extra main task stack size compared to C (the default is 3K)
+# You might have to increase this further if you allocate large stack variables in the main task
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# Increase a bit these stack sizes as they are also a bit too small by default
+CONFIG_ESP_SYSTEM_EVENT_TASK_STACK_SIZE=4096
+CONFIG_FREERTOS_IDLE_TASK_STACKSIZE=4096
+
+# You might have to increase this further if you spawn your own Rust threads 
+# that allocate large stack variables; or better yet - use 
+# `std::thread::Builder::new().stack_size(XXX)` for spawning
+CONFIG_PTHREAD_TASK_STACK_SIZE_DEFAULT=4096
+
+# The page (crates/web): the console's WebSocket, and sockets for it - two event streams, two browser consoles,
+# short requests, TCP port 23 with two readers - beyond the default ten.
+CONFIG_HTTPD_WS_SUPPORT=y
+CONFIG_LWIP_MAX_SOCKETS=16
+
+# The clock (crates/firmware/src/clock.rs): the router and pool.ntp.org, and a third a person may add - the setting
+# ntp takes up to settings::MAX_SERVERS.
+CONFIG_LWIP_SNTP_MAX_SERVERS=3
+
+# THE TICK, AND IT IS NOT A DETAIL OF TASTE. A sleep SHORTER than one tick does not yield the core at all - the
+# thread spins on it (ESP-IDF, api-reference/system/pthread.rst). At the default 100 Hz a tick is 10 ms, so the
+# 1 ms between samples of an analog window was twenty milliseconds of a core held busy, twice over for two
+# sensors, and polling every 110 ms instead of every second makes that happen from about 4 % of the time to
+# about 36 %, none of it given back.
+#
+# At 1000 Hz the same sleep blocks properly and the core goes to whoever needs it - the zero-crossing work of
+# the dimmer, the network, the idle task the watchdogs watch. It also makes the rounds land on their asked-for
+# period instead of being rounded up to the next tick.
+CONFIG_FREERTOS_HZ=1000
+
+# The board has to be able to say how close its tasks are to overflowing their stacks, BEFORE one of them does.
+# FreeRTOS catches an overflow at a context switch, so the trace names the scheduler and not the code that ate
+# the stack - the board fell exactly that way on 21.09. uxTaskGetSystemState is what `status` reads for its
+# "least stack ever free" line, and it needs the trace facility linked in.
+CONFIG_FREERTOS_USE_TRACE_FACILITY=y
+
+# A TASK THAT HOLDS ITS CORE FALLS THROUGH THE PANIC, so the note of the fall (crates/firmware, panic_note) carries
+# the stacks of both cores. Without it the task watchdog only prints a trace to a console nobody reads and feeds
+# itself: the board goes on, or - if its interrupt never runs - is reset by the timer's second stage with no note
+# at all (research 6.4: the fall of 24.09 13:44:41, reset code 6 and nothing in the journal). What the flag cannot
+# change is that second stage: a watchdog whose own interrupt is starved still resets the board silently.
+CONFIG_ESP_TASK_WDT_PANIC=y
+
+# THE INTERRUPT WATCHDOG WAITS TWO SECONDS, NOT 300 MS. It is fed from the tick, and a leap of the systimer's counter
+# at the switching of the burner's power loads (26.09) silenced the tick until the tick's watcher (firmware systick)
+# sets its alarm again - 20 ms by design; the margin is for what the watcher cannot see. The task watchdog stays at 5 s:
+# it is the net against a task held for good, the one that switches the auger among them.
+CONFIG_ESP_INT_WDT_TIMEOUT_MS=2000
+
+# The watcher of the tick runs on a timer group's timer, and its handler must run while the cache is off - a flash
+# write is exactly when a leap cannot be left unseen.
+CONFIG_GPTIMER_ISR_CACHE_SAFE=y
+
+# The gate of the fan stops itself when the fronts of the zero-crossing pin stop (devices/burner, fan_gate::gate_stop): the callback at the peak of the gate's timer moves the comparators, and it must run while the cache is off - the journal is
+# written to flash in batches. The driver then also keeps `mcpwm_comparator_set_compare_value` (which the callback calls) and its objects in IRAM and internal RAM (components/esp_driver_mcpwm/Kconfig, linker.lf).
+CONFIG_MCPWM_CTRL_FUNC_IN_IRAM=y
+CONFIG_MCPWM_ISR_CACHE_SAFE=y
+
+# THE PANIC RUNS FROM IRAM, and so does the writing of the note (panic_note.c): a fall while the flash chip erases or
+# writes finds the code in flash unreadable for as long as the erase lasts, and the note is not written - on the burner
+# on 26.09 most falls left none, and its journal writes to the flash often (research 6.6, Watchdogs_Mid_Burn).
+CONFIG_ESP_PANIC_HANDLER_IRAM=y
+
+# THE CPU EACH TASK TAKES IS COUNTED (by esp_timer, at every switch of tasks): `status` says the longest the net loop held
+# its core in one step (between::Steps), and a wait for a lock is sleep, not a hold - by the clock it read as one.
+CONFIG_FREERTOS_GENERATE_RUN_TIME_STATS=y
+
+# System tasks whose stacks IDF sizes, measured on `.30` under the page's and the consoles' commands with
+# bus scan: ipc0 412 bytes of 1280 left (868 used), Tmr Svc 1396 of 2048 (652 used). Each gets what it used and
+# firmware's board::ROOMY (1536), up to a multiple of 512.
+CONFIG_ESP_IPC_TASK_STACK_SIZE=2560
+CONFIG_FREERTOS_TIMER_TASK_STACK_DEPTH=2560
+
+# THE NETWORK ON CORE 0, THE HARDWARE ON CORE 1. Wi-Fi's task, the main task and esp_timer are on core 0
+# by IDF's own defaults; lwip's tcpip task is left to the scheduler unless told, and the burner's falls of 24.09 by the
+# task watchdog were on core 0 in that thread. Our tasks name their core when they are born (crates/round, Core).
+CONFIG_LWIP_TCPIP_TASK_AFFINITY_CPU0=y
+# FreeRTOS's timer task (Tmr Svc), which runs FreeRTOS's software timers, is left to the scheduler unless told; every
+# task of this board names its core, and this one is IDF's own, beside the network.
+CONFIG_FREERTOS_TIMER_TASK_AFFINITY_CPU0=y
+
+# THE ANSWERING OF THE NAME (crates/firmware/src/net.rs, `answer_to`): mDNS answers for the board's own name on the station and nothing else - no service, no access point, no console command. Its tasks
+# and tables are the internal heap's, and on 04.10 the burner stood 23.6 KB lower after coming up with it and the pellets' task: what the component does not need for that is off or at its least.
+# The component (espressif/mdns 1.3.2) has no setting for where its buffers go - they are plain mallocs, and only the global threshold of the external RAM (SPIRAM_MALLOC_ALWAYSINTERNAL) would move them, taking the
+# page's and the network's with them - so it is made smaller instead of moved.
+CONFIG_MDNS_ENABLE_CONSOLE_CLI=n
+CONFIG_MDNS_PREDEF_NETIF_AP=n
+CONFIG_MDNS_MAX_INTERFACES=1
+CONFIG_MDNS_MAX_SERVICES=1
+CONFIG_MDNS_ACTION_QUEUE_LEN=8
+
+# Wi-Fi: the cipher GCMP (ESP-IDF #14730). An access point that asks for it keeps a station without it out of
+# the network at the handshake. The ESP32-S3 can do it and the option is off by default; the ESP32 cannot, and the option
+# drops itself there (`depends on SOC_WIFI_GCMP_SUPPORT`).
+CONFIG_ESP_WIFI_GCMP_SUPPORT=y

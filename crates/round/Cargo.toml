@@ -1,0 +1,8 @@
+[package]
+name = "round"
+version = "0.1.0"
+edition.workspace = true
+description = "A task of the board started with a name the kernel knows and a stack that is not a guess - for every crate that starts one, the page's among them"
+
+[dependencies]
+esp-idf-svc = { workspace = true }

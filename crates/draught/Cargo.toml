@@ -1,0 +1,5 @@
+[package]
+name = "draught"
+version = "0.1.0"
+edition.workspace = true
+description = "What the pressure sensor of the burner says in one reading of the pin, in pascals, and nothing about wires"

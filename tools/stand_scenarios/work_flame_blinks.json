@@ -1,0 +1,8 @@
+{
+  "about": "Lit as in lighting.json, working from 155 s, and the flame is gone for 20 s at work (200-219 s): the work goes on - the same stage, the same feed, the same air.",
+  "seconds": 330,
+  "press": [[2, "start"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [199, 900], [200, 3150], [219, 3150], [220, 900]],
+  "boiler_c": [[0, 38], [330, 52]],
+  "flue_c": [[0, 24], [100, 30], [330, 95]]
+}

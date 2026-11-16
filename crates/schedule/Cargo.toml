@@ -1,0 +1,5 @@
+[package]
+name = "schedule"
+version = "0.1.0"
+edition.workspace = true
+description = "Which profile stands now: the profiles, the windows that open and close by the board's wall clock, and the main profile outside them - the time in, a profile out, and no board anywhere"

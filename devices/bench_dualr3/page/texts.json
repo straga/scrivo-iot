@@ -1,0 +1,46 @@
+{
+ "settings": {
+  "rows": {
+   "choices": [
+    {
+     "value": "15",
+     "words": "15 min",
+     "means": "the energy history takes a row every 15 min, 96 a day"
+    },
+    {
+     "value": "30",
+     "words": "30 min",
+     "means": "the energy history takes a row every 30 min, 48 a day"
+    },
+    {
+     "value": "60",
+     "words": "1 hour",
+     "means": "the energy history takes a row every hour, 24 a day"
+    }
+   ]
+  }
+ },
+ "ru": {
+  "settings": {
+   "rows": {
+    "choices": [
+     {
+      "value": "15",
+      "words": "15 мин",
+      "means": "история энергии берёт строку каждые 15 минут, 96 в сутки"
+     },
+     {
+      "value": "30",
+      "words": "30 мин",
+      "means": "история энергии берёт строку каждые 30 минут, 48 в сутки"
+     },
+     {
+      "value": "60",
+      "words": "1 час",
+      "means": "история энергии берёт строку каждый час, 24 в сутки"
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,125 @@
+{
+ "about": "The house asks by the schedule alone: the wall clock starts on Monday 12:00 and runs at 3 minutes a second, the main profile is off and window 1, 22:00-06:00, is comfort. Start at 2 s lights the fire at once, as a Start does, and the house is warm: the fire goes down to smouldering the second it works. The window opens at 200 s (22:00): the house says cold and the smouldering fire works again, by the water, which is under the line; the window closes at 360 s (06:00): the house says warm, the working fire goes down to smouldering again and burns out by its own time.",
+ "seconds": 640,
+ "press": [
+  [
+   2,
+   "start"
+  ],
+  [
+   3,
+   "light"
+  ]
+ ],
+ "clock": {
+  "start": "mon 12:00",
+  "minutes_a_second": 3
+ },
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   95,
+   3150
+  ],
+  [
+   96,
+   1800
+  ],
+  [
+   105,
+   1800
+  ],
+  [
+   106,
+   900
+  ],
+  [
+   460,
+   900
+  ],
+  [
+   470,
+   3150
+  ],
+  [
+   640,
+   3150
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   640,
+   45
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   470,
+   60
+  ],
+  [
+   640,
+   40
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   640,
+   40
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   640,
+   35
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ],
+  [
+   640,
+   18
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "90",
+  "auto_step": "6",
+  "auto_asked_by": "schedule",
+  "auto_profile": "off",
+  "window_1": "set:daily 22:00-06:00 comfort"
+ }
+}

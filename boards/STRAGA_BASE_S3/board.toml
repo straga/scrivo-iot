@@ -1,0 +1,9 @@
+# Our base board on ESP32-S3-WROOM-1 N8R2: what it gives a Rust image. The partition table and the bootloader
+# options are the board's one set for every image on it (MicroPython, the recovery image, Rust) and live in
+# scrivo-safe; flash size, frequency and mode are read from that bootloader.sdkconfig.
+target = "xtensa-esp32s3-espidf"
+mcu = "esp32s3"
+# the board's folder inside scrivo-safe (tools/board_env.py, `scrivo_safe`)
+safe = "boards/STRAGA_BASE_S3"
+# the two megabytes of PSRAM of the N8R2 module: the image may ask IDF for them (sdkconfig.defaults of this folder)
+psram = true

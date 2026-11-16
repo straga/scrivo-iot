@@ -1,0 +1,7 @@
+{
+  "about": "The flame alone: the pin dark at 3150 mV, a weak flame, a steady one, the two thresholds touched exactly (2400 and 1100 mV), the pin silent for ten seconds, and dark again. Straight lines between the points.",
+  "seconds": 130,
+  "flame_mv": [[0, 3150], [10, 3150], [20, 2400], [30, 2000], [40, 1800], [50, 1100], [60, 900], [70, 900], [80, 2400], [81, 1100], [90, 1100], [91, null], [101, null], [102, 900], [110, 900], [120, 3150], [130, 3150]],
+  "boiler_c": [[0, 38], [130, 40]],
+  "flue_c": [[0, 24], [130, 30]]
+}

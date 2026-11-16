@@ -1,0 +1,8 @@
+[package]
+name = "daily"
+version = "0.1.0"
+edition.workspace = true
+description = "When the board restarts itself once a day, and when it writes down what the draught's silence leaves behind - the moment in, a verdict out, and no board anywhere"
+
+[dependencies]
+schedule.workspace = true

@@ -1,0 +1,104 @@
+{
+  "about": "A light by the person's press when the thermostat holds the RETURN (`auto_hold` return) and nobody asks for heat: the manual cycle of the water runs by the return's water, and the line says the return's reading, not the boiler's.",
+  "seconds": 520,
+  "press": [
+    [
+      2,
+      "start"
+    ],
+    [
+      40,
+      "light"
+    ]
+  ],
+  "flame_mv": [
+    [
+      0,
+      3150
+    ],
+    [
+      132,
+      3150
+    ],
+    [
+      133,
+      1800
+    ],
+    [
+      142,
+      1800
+    ],
+    [
+      143,
+      900
+    ]
+  ],
+  "boiler_c": [
+    [
+      0,
+      36
+    ],
+    [
+      500,
+      56
+    ]
+  ],
+  "flue_c": [
+    [
+      0,
+      24
+    ],
+    [
+      140,
+      30
+    ],
+    [
+      500,
+      120
+    ]
+  ],
+  "supply_c": [
+    [
+      0,
+      36
+    ],
+    [
+      500,
+      50
+    ]
+  ],
+  "return_c": [
+    [
+      0,
+      30
+    ],
+    [
+      500,
+      44
+    ]
+  ],
+  "room_c": [
+    [
+      0,
+      21.1
+    ],
+    [
+      150,
+      21.1
+    ],
+    [
+      450,
+      22.4
+    ],
+    [
+      520,
+      22.4
+    ]
+  ],
+  "settings": {
+    "role_ntc_1": "boiler",
+    "role_ntc_2": "supply",
+    "role_ntc_3": "return",
+    "auto_hold": "return"
+  }
+}

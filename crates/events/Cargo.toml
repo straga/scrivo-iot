@@ -1,0 +1,17 @@
+[package]
+name = "events"
+version = "0.1.0"
+edition.workspace = true
+description = "What the board tells its subscribers: which of its cards changed, as a set of marks per subscriber"
+
+[dependencies]
+page = { workspace = true }
+embassy-sync = { workspace = true }
+# the lock under the channels between tasks, a FreeRTOS mutex on the board, and the wait that sleeps until woken
+between = { workspace = true }
+
+[dev-dependencies]
+# on the host: a clock, and a critical section of std under the channels' lock (between); on the board esp-idf-svc
+# gives the clock and the lock is a FreeRTOS mutex
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }

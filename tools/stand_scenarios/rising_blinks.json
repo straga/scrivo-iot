@@ -1,0 +1,8 @@
+{
+  "about": "Lit as in lighting.json, and the flame blinks out for 3 s in the middle of rising (130-132 s), then holds: rising starts its count again from the return, the auger stands the whole of it, and the work begins 60 s after 133 s.",
+  "seconds": 330,
+  "press": [[2, "start"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [129, 900], [130, 3150], [132, 3150], [133, 900]],
+  "boiler_c": [[0, 38], [330, 52]],
+  "flue_c": [[0, 24], [100, 30], [330, 120]]
+}

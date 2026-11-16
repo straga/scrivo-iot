@@ -1,0 +1,79 @@
+[package]
+name = "bench_dualr3s3"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+# the sources are the Dual's own (src/main.rs names them by path): a stand with a copy of them would measure the copy
+build = "../bench_dualr3/build.rs"
+description = "Stand: the Sonoff Dual R3 firmware on the bench S3 without PSRAM - the same modules on free pins, the sources of bench_dualr3"
+
+[package.metadata.rust_app]
+board = "STRAGA_BASE_S3"
+# the Dual R3 closes its relays on high: the level its firmware has driven them with
+relays_close_on = "high"
+
+# Nothing is wired: the modules run, hold their stacks and take their memory on the S3's free pins, and the heap says what
+# they cost. tools/board_env.py checks each against boards/STRAGA_BASE_S3 and hands it to build.rs.
+[package.metadata.rust_app.pins]
+relay1 = "GPIO11"
+relay2 = "GPIO12"
+switch1 = "GPIO13"
+switch2 = "GPIO14"
+# the BL0939 energy meter on UART2, 4800 baud: TX of the board to the meter, RX from it
+meter_tx = "GPIO15"
+meter_rx = "GPIO16"
+
+# What the settings changed in place start from on a board whose nvs has none (crates/settings; checked by build.rs).
+# A value set on the board's page stays: a new image seeds only what is empty.
+[package.metadata.rust_app.settings]
+time = "auto"
+zone = "gmt+2"
+rows = "60"
+keep = "12"
+
+[[bin]]
+name = "bench_dualr3s3"
+path = "src/main.rs"
+harness = false
+
+[dependencies]
+log = { workspace = true }
+# block_on: a future waited on by a task, its weight held at build time
+between = { workspace = true }
+# critical-section: crates/events waits on an embassy_sync Watch with a timeout
+esp-idf-svc = { workspace = true, features = ["critical-section", "embassy-sync"] }
+# the timers of the network loop, the sensors and the desks: the time driver is `between::steady_time`, and its queue has
+# a place per waiting task
+embassy-time = { workspace = true }
+app_desc = { workspace = true }
+bl0939 = { workspace = true }
+energy = { workspace = true }
+bench_dualr3_api = { path = "../bench_dualr3/api" }
+firmware = { workspace = true }
+module = { workspace = true }
+page = { workspace = true }
+relay = { workspace = true }
+settings = { workspace = true }
+switch = { workspace = true }
+# the energy's count and CSV (count.rs); and esp-idf-sys builds the IDF components of the root crate and of its direct
+# dependencies only - vfs carries app_fs, which firmware needs
+vfs = { workspace = true }
+ways_down = { workspace = true }
+web = { workspace = true }
+
+[features]
+# Layers 3 and 4 of the stand: the relays and the wall switches alone (`--no-default-features`), or with the meter and the energy
+# counted from it (the default).
+default = ["meter"]
+meter = []
+# The rollback check: an image that runs and never confirms itself. Not for the board's own use.
+never-confirm = ["firmware/never-confirm"]
+
+[build-dependencies]
+embuild = { workspace = true }
+dictionary = { workspace = true }
+bench_dualr3_api = { path = "../bench_dualr3/api" }
+settings = { workspace = true }
+# the flag that puts the panic_note component in front of the chip's panic handler
+fell_where = { workspace = true }
+version = { workspace = true }

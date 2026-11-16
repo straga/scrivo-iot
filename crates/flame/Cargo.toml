@@ -1,0 +1,5 @@
+[package]
+name = "flame"
+version = "0.1.0"
+edition.workspace = true
+description = "What the burner's photoresistor says about its flame, from the millivolts on the pin, and nothing about wires"

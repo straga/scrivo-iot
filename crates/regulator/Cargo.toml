@@ -1,0 +1,9 @@
+[package]
+name = "regulator"
+version = "0.1.0"
+edition.workspace = true
+description = "What angle holds the draught at its setpoint: an incremental PI with a set of gains each way"
+
+[dependencies]
+draught = { workspace = true }
+dimmer = { workspace = true }

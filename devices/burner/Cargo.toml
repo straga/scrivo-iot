@@ -1,0 +1,69 @@
+[package]
+name = "burner"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "The pellet burner on STRAGA_BASE_S3, laid out by layers: hardware, logic (crates/), API (api/), page. Described by burner.yaml"
+
+[[bin]]
+name = "burner"
+harness = false
+
+[dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true, features = ["critical-section", "embassy-sync"] }
+# the timers of the network loop, the sensors and the desks: the time driver is `between::steady_time`, and its queue has
+# a place per waiting task
+embassy-time = { workspace = true }
+# what the burner says outward: the layer of its own, a crate so that it cannot reach the hardware
+burner_api = { path = "api" }
+app_desc = { workspace = true }
+# the logic and the mechanics the modules ask: what the pin's millivolts mean, what the bus's answers and the chip's word mean, the rings of readings, the window's numbers, the settings
+analog = { workspace = true }
+between = { workspace = true }
+# the gate handed from the counting round to the regulator once (src/hardware/fan_gate.rs)
+embassy-sync = { workspace = true }
+automaton = { workspace = true }
+burner_map = { workspace = true }
+curve = { workspace = true }
+draught = { workspace = true }
+dimmer = { workspace = true }
+regulator = { workspace = true }
+flame = { workspace = true }
+max6675 = { workspace = true }
+modbus = { workspace = true }
+pellets = { workspace = true }
+soot = { workspace = true }
+settings = { workspace = true }
+burner_settings = { workspace = true }
+thermostat = { workspace = true }
+demand = { workspace = true }
+schedule = { workspace = true }
+daily = { workspace = true }
+firmware = { workspace = true }
+module = { workspace = true }
+relay = { workspace = true }
+page = { workspace = true }
+# esp-idf-sys builds the IDF components of the root crate and of its direct dependencies only - vfs carries app_fs,
+# which firmware needs
+vfs = { workspace = true }
+web = { workspace = true }
+# the socket the burner is plugged into: read over the network by the page's loop (modules/mains.rs)
+tasmota = { path = "../../crates/tasmota" }
+mains = { path = "../../crates/mains" }
+edge-nal-std = { workspace = true }
+ways_down = { workspace = true }
+
+[features]
+# The rollback check: an image that runs and never confirms itself. Not for the board's own use.
+never-confirm = ["firmware/never-confirm"]
+
+[build-dependencies]
+embuild = { workspace = true }
+burner_api = { path = "api" }
+dictionary = { workspace = true }
+settings = { workspace = true }
+burner_settings = { workspace = true }
+# the flag that puts the panic_note component in front of the chip's panic handler
+fell_where = { workspace = true }
+version = { workspace = true }

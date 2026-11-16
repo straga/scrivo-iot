@@ -1,0 +1,8 @@
+{
+  "about": "Lit as in lighting.json, working from 155 s, and the flame is gone for good from 200 s: the work goes on for 119 s and the fire is lit again on the 120th second without a flame, at 319 s, with no dose: the work fed the pot through the wait.",
+  "seconds": 420,
+  "press": [[2, "start"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [199, 900], [200, 3150]],
+  "boiler_c": [[0, 38], [420, 52]],
+  "flue_c": [[0, 24], [100, 30], [420, 95]]
+}

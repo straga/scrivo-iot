@@ -1,0 +1,9 @@
+{
+  "about": "Every state a card has, for the page to be measured in: Start at 2 s, the flame 20 s after the first dose - millivolts on its pin, 3150 dark, 1800 weak, 900 steady, and none from 760 s to 790 s, a pin that reads nothing -, the feed banned and allowed while the fire works, the flue sensor silent for a while, the water past the want so the fire smoulders, Stop and its burning off, a Start on a dark pot that ends in a fault, and the water past the alarm at the end.",
+  "seconds": 1500,
+  "press": [[2, "start"], [650, "stop"], [900, "start"]],
+  "feed": [[330, false], [360, true]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [699, 900], [700, 3150], [760, null], [790, 3150]],
+  "boiler_c": [[0, 38], [450, 55], [520, 68], [1300, 70], [1400, 97]],
+  "flue_c": [[0, 24], [100, 30], [400, 120], [420, null], [440, null], [460, 125], [800, 40]]
+}

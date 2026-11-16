@@ -1,0 +1,165 @@
+=== help
+rust> help
+Commands:
+  status    Version, running partition, uptime, memory and network
+  restart   Restart the board
+  down      Boot the recovery image in factory
+  toggle    Switch a thing over: toggle <name>
+  press     Press a button: press <name>
+  on        Turn a thing on: on <name>
+  off       Turn a thing off: off <name>
+  fell      What the board recorded about the last time it fell: fell, or fell now to make it fall on purpose
+  log       The modules and how loud each is; log <module> <level> turns one up
+  settings  The settings and their values
+  set       Change a setting: set time auto|internet|<server>, set zone kyiv, set <name> <value>
+  dim       Hold the fan at a percent of air: dim 40, dim 0 to stop it
+  reset     Zero the pellets counted: reset pellets, then reset pellets yes
+rust> 
+=== status
+rust> status
+version stragabases3-26.10.06.7
+running ota_0
+rust> 
+=== toggle igniter
+rust> toggle igniter
+igniter on - off by itself in 5:00
+rust> 
+=== toggle pump
+rust> toggle pump
+toggle refused: nothing on this board switches pump on and off
+rust> 
+=== toggle
+rust> toggle
+error: missing required argument: name
+rust> 
+=== press stop
+rust> press stop
+stop pressed
+rust> 
+=== press pump
+rust> press pump
+press refused: nothing on this board presses pump
+rust> 
+=== on igniter
+rust> on igniter
+igniter on
+rust> 
+=== off igniter
+rust> off igniter
+igniter off
+rust> 
+=== on pump
+rust> on pump
+on refused: nothing on this board turns pump on or off
+rust> 
+=== dim 40
+rust> dim 40
+fan held at 40%
+rust> 
+=== dim 0
+rust> dim 0
+fan held at 0%
+rust> 
+=== dim 120
+rust> dim 120
+dim refused: the fan holds 0 to 100
+rust> 
+=== dim half
+rust> dim half
+dim refused: 'half' is no whole number: dim 40, dim 0 to stop it
+rust> 
+=== dim
+rust> dim
+dim refused: dim takes a number: dim 40, dim 0 to stop it
+rust> 
+=== reset pellets
+rust> reset pellets
+reset pellets zeroes today, month and total of the pellets burned. To do it: reset pellets yes
+rust> 
+=== reset pellets yes
+rust> reset pellets yes
+pellets zeroed: today, month and total
+rust> 
+=== reset pellets maybe
+rust> reset pellets maybe
+reset refused: 'maybe' is not yes; nothing zeroed
+rust> 
+=== reset energy
+rust> reset energy
+reset refused: nothing on this board takes energy
+rust> 
+=== reset energy yes
+rust> reset energy yes
+reset refused: nothing on this board takes energy
+rust> 
+=== reset
+rust> reset
+reset refused: reset takes what to zero: reset pellets
+rust> 
+=== reset foo
+rust> reset foo
+reset refused: nothing on this board takes foo
+rust> 
+=== bus scan
+rust> bus scan
+error: unknown command; the words of this board: status, restart, down, toggle, press, on, off, fell, log, settings, set, dim, reset
+rust> 
+=== bus
+rust> bus
+error: unknown command; the words of this board: status, restart, down, toggle, press, on, off, fell, log, settings, set, dim, reset
+rust> 
+=== meter
+rust> meter
+error: unknown command; the words of this board: status, restart, down, toggle, press, on, off, fell, log, settings, set, dim, reset
+rust> 
+=== settings
+rust> settings
+Time comes from: auto
+Hold until: 44 °C
+rust> 
+=== set auto_hold_c 50
+rust> set auto_hold_c 50
+auto_hold_c: 50
+rust> 
+=== set auto_hold_c abc
+rust> set auto_hold_c abc
+set refused: auto_hold_c: 'abc' is not a whole number from 5 to 85
+rust> 
+=== set
+rust> set
+error: missing required argument: name
+rust> 
+=== fell
+rust> fell
+fell refused: this board keeps no note of a fall
+rust> 
+=== log
+rust> log
+log refused: this board keeps no levels of its own
+rust> 
+=== reboot
+rust> reboot
+error: unknown command; the words of this board: status, restart, down, toggle, press, on, off, fell, log, settings, set, dim, reset
+rust> 
+=== flame pretend steady
+rust> flame pretend steady
+error: unknown command; the words of this board: status, restart, down, toggle, press, on, off, fell, log, settings, set, dim, reset
+rust> 
+=== help dim
+rust> help dim
+Hold the fan at a percent of air: dim 40, dim 0 to stop it
+
+Usage: dim [WORDS]...
+rust> 
+=== help toggle
+rust> help toggle
+Switch a thing over: toggle <name>
+
+Usage: toggle <NAME>
+
+Arguments:
+  <NAME>  
+
+Options:
+  -h, --help  Print help
+rust> 

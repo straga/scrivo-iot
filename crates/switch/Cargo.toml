@@ -1,0 +1,8 @@
+[package]
+name = "switch"
+version = "0.1.0"
+edition.workspace = true
+description = "A wall switch on a pin with a pull-up: what a settled movement of its key means, by the switch's mode"
+
+[dependencies]
+page = { workspace = true }

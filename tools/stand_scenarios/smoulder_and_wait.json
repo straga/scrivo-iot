@@ -1,0 +1,133 @@
+{
+ "about": "The burner's run to the end of a smouldering and the wait after it: Start at 2 s, the flame 20 s after the first dose, the water past the setpoint at 300 s so the fire smoulders for 90 s (the scenario's `auto_smoulder_s`), then burning off and a stop that heat is still wanted after, the water falling under the setpoint less its hysteresis from 1100 s, and the burner lit again by it.",
+ "seconds": 1500,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   1200,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   250,
+   52
+  ],
+  [
+   300,
+   68
+  ],
+  [
+   1100,
+   66
+  ],
+  [
+   1250,
+   50
+  ],
+  [
+   1500,
+   45
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   1500,
+   125
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   66
+  ],
+  [
+   1100,
+   64
+  ],
+  [
+   1250,
+   48
+  ],
+  [
+   1500,
+   45
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   50
+  ],
+  [
+   1500,
+   40
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ],
+  [
+   1500,
+   22
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "90"
+ }
+}

@@ -1,0 +1,5 @@
+[package]
+name = "reset_why"
+version = "0.1.0"
+edition.workspace = true
+description = "Why the chip came up, in words a person can act on - and the bare number when the code is one we do not know"

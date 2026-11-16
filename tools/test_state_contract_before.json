@@ -1,0 +1,1324 @@
+{
+ "all": true,
+ "device": "burner",
+ "board": "STRAGA_BASE_S3",
+ "kit": "stragabases3-26.09.23.26",
+ "free": 71160,
+ "used": 250364,
+ "uptime": 2035106,
+ "low_memory": false,
+ "things": [
+  {
+   "name": "console",
+   "state": null,
+   "can": [],
+   "level": "dim",
+   "group": "system"
+  },
+  {
+   "name": "wifi",
+   "state": "192.0.2.39 · GZ103",
+   "can": [],
+   "level": "ok",
+   "group": "system",
+   "signal": -69
+  },
+  {
+   "name": "stage",
+   "state": "stop",
+   "can": [],
+   "level": null,
+   "group": "automaton",
+   "value": {
+    "word": "stop"
+   }
+  },
+  {
+   "name": "doing",
+   "state": "stopped",
+   "can": [],
+   "level": null,
+   "group": "automaton"
+  },
+  {
+   "name": "for",
+   "state": "33 min 13 s",
+   "can": [],
+   "level": "dim",
+   "group": "automaton",
+   "value": {
+    "seconds": 1993
+   }
+  },
+  {
+   "name": "auger",
+   "state": "off",
+   "can": [],
+   "level": null,
+   "group": "automaton",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "igniter",
+   "state": "off",
+   "can": [],
+   "level": null,
+   "group": "automaton",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "pump",
+   "state": "off",
+   "can": [],
+   "level": null,
+   "group": "automaton",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "pump by",
+   "state": "water 19 °C",
+   "can": [],
+   "level": "dim",
+   "group": "automaton"
+  },
+  {
+   "name": "fan",
+   "state": "off",
+   "can": [],
+   "level": null,
+   "group": "automaton",
+   "value": {
+    "word": "off"
+   }
+  },
+  {
+   "name": "organs",
+   "state": "auger igniter pump fan",
+   "can": [],
+   "level": "dim",
+   "group": "automaton",
+   "value": {
+    "word": "auger igniter pump fan"
+   }
+  },
+  {
+   "name": "start",
+   "state": "start",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "automaton"
+  },
+  {
+   "name": "quick",
+   "state": "quick",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "automaton"
+  },
+  {
+   "name": "stop",
+   "state": "stop",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "automaton"
+  },
+  {
+   "name": "purge_after_s",
+   "state": "20 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 20.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "burn_off_s",
+   "state": "120 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 120.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "burn_off_pa",
+   "state": "50 Pa",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 50.0,
+     "unit": "Pa"
+    }
+   }
+  },
+  {
+   "name": "dose_after_first",
+   "state": "0.1 of the first",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 0.1,
+     "unit": "of the first"
+    }
+   }
+  },
+  {
+   "name": "rise_s",
+   "state": "60 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 60.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "lost_s",
+   "state": "10 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 10.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "rescue_s",
+   "state": "30 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 30.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "rescue.pa",
+   "state": "74 Pa",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 74.0,
+     "unit": "Pa"
+    }
+   }
+  },
+  {
+   "name": "rescue.on_s",
+   "state": "10 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 10.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "rescue.off_s",
+   "state": "20 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 20.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "smoulder_s",
+   "state": "300 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 300.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "smoulder.pa",
+   "state": "0 Pa",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 0.0,
+     "unit": "Pa"
+    }
+   }
+  },
+  {
+   "name": "smoulder.on_s",
+   "state": "1 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 1.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "smoulder.off_s",
+   "state": "50 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 50.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "flue_holds_c",
+   "state": "100 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 100.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "flue_rise_c",
+   "state": "5 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 5.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "flue_rise_s",
+   "state": "60 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 60.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "want_c",
+   "state": "60 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 60.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "hysteresis_c",
+   "state": "4 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 4.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "too_hot_c",
+   "state": "88 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 88.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "alarm_c",
+   "state": "95 °C",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 95.0,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "sure_s",
+   "state": "10 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 10.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "spin_up_s",
+   "state": "10 s",
+   "can": [],
+   "level": null,
+   "group": "automaton_fixed",
+   "value": {
+    "number": {
+     "value": 10.0,
+     "unit": "s"
+    }
+   }
+  },
+  {
+   "name": "auger",
+   "state": "off",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "relays",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "igniter",
+   "state": "off",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "relays",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "pump",
+   "state": "off",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "relays",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "aux_power",
+   "state": "off",
+   "can": [
+    "toggle"
+   ],
+   "level": null,
+   "group": "relays",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "water leaving the boiler",
+   "state": "18.5 °C",
+   "can": [],
+   "level": null,
+   "group": "temperatures",
+   "curves": [
+    {
+     "name": "water-1",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 18.5,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "water coming back",
+   "state": "18.8 °C",
+   "can": [],
+   "level": null,
+   "group": "temperatures",
+   "curves": [
+    {
+     "name": "water-2",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 18.8,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "water in the boiler",
+   "state": "19.1 °C",
+   "can": [],
+   "level": null,
+   "group": "temperatures",
+   "curves": [
+    {
+     "name": "water-3",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 19.1,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "the boiler room",
+   "state": "18.8 °C",
+   "can": [],
+   "level": null,
+   "group": "temperatures",
+   "curves": [
+    {
+     "name": "water-4",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 18.8,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "bus",
+   "state": "18 read · 0 silent · 0 broken · 0 foreign · last window 0 silent",
+   "can": [],
+   "level": null,
+   "group": "temperatures"
+  },
+  {
+   "name": "flue gas",
+   "state": "18.8 °C",
+   "can": [],
+   "level": null,
+   "group": "flue",
+   "curves": [
+    {
+     "name": "flue",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 18.75,
+     "unit": "°C"
+    }
+   }
+  },
+  {
+   "name": "holding",
+   "state": "off",
+   "can": [],
+   "level": "dim",
+   "group": "fan",
+   "curves": [
+    {
+     "name": "fan-holding",
+     "words": "five minutes"
+    }
+   ],
+   "value": {
+    "word": "off"
+   }
+  },
+  {
+   "name": "draught",
+   "state": "off",
+   "can": [],
+   "level": null,
+   "group": "fan",
+   "range": {
+    "min": 0,
+    "max": 300,
+    "step": 1,
+    "value": 31,
+    "unit": "Pa"
+   },
+   "value": {
+    "word": "off"
+   }
+  },
+  {
+   "name": "purge",
+   "state": "off",
+   "can": [
+    "toggle"
+   ],
+   "level": "dim",
+   "group": "fan",
+   "value": {
+    "on": false
+   }
+  },
+  {
+   "name": "zero crossings",
+   "state": "100 a second",
+   "can": [],
+   "level": "ok",
+   "group": "fan",
+   "value": {
+    "number": {
+     "value": 100.0,
+     "unit": "/s"
+    }
+   }
+  },
+  {
+   "name": "gate",
+   "state": "off",
+   "can": [],
+   "level": "ok",
+   "group": "fan",
+   "range": {
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "value": 0,
+    "unit": "%"
+   },
+   "value": {
+    "number": {
+     "value": 0.0,
+     "unit": "%"
+    }
+   }
+  },
+  {
+   "name": "blast pressure",
+   "state": "under 500 mV, its own zero - check the tube's port",
+   "can": [],
+   "level": "warn",
+   "group": "draught"
+  },
+  {
+   "name": "pin",
+   "state": "156 mV · spread 11 mV of 20",
+   "can": [],
+   "level": "ok",
+   "group": "draught",
+   "curves": [
+    {
+     "name": "draught-fast",
+     "words": "minute"
+    },
+    {
+     "name": "draught-slow",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 156.0,
+     "unit": "mV"
+    }
+   }
+  },
+  {
+   "name": "flame",
+   "state": "out - dark, and a broken wire reads the same here",
+   "can": [],
+   "level": "dim",
+   "group": "flame",
+   "value": {
+    "word": "out"
+   }
+  },
+  {
+   "name": "pin",
+   "state": "3153 mV · spread 0 mV of 20 · at the top of the scale",
+   "can": [],
+   "level": "dim",
+   "group": "flame",
+   "curves": [
+    {
+     "name": "flame-fast",
+     "words": "minute"
+    },
+    {
+     "name": "flame-slow",
+     "words": "quarter hour"
+    }
+   ],
+   "value": {
+    "number": {
+     "value": 3153.0,
+     "unit": "mV"
+    }
+   }
+  }
+ ],
+ "terminal": "/console",
+ "time": "2026-09-23 22:53 EEST · from pool.ntp.org",
+ "settings": [
+  {
+   "name": "time",
+   "label": "Time comes from",
+   "value": "auto",
+   "options": [
+    {
+     "value": "auto",
+     "words": "automatically - from the router, or from the internet when it is silent"
+    },
+    {
+     "value": "internet",
+     "words": "only from the internet (pool.ntp.org)"
+    },
+    {
+     "value": "server",
+     "words": "from a server",
+     "takes": "the server's name or address"
+    }
+   ],
+   "note": "last came from pool.ntp.org at 22:19"
+  },
+  {
+   "name": "zone",
+   "label": "Time zone",
+   "value": "kyiv",
+   "options": [
+    {
+     "value": "kyiv",
+     "words": "Kyiv, Chisinau, Helsinki, Riga - UTC+2, +3 in summer"
+    },
+    {
+     "value": "warsaw",
+     "words": "Warsaw, Berlin, Prague, Paris - UTC+1, +2 in summer"
+    },
+    {
+     "value": "london",
+     "words": "London, Lisbon, Dublin - UTC+0, +1 in summer"
+    },
+    {
+     "value": "istanbul",
+     "words": "Istanbul, Minsk, Moscow - UTC+3"
+    },
+    {
+     "value": "utc",
+     "words": "UTC, no summer time"
+    }
+   ]
+  },
+  {
+   "name": "auto_purge",
+   "label": "Purge before lighting",
+   "value": "30",
+   "seconds": [
+    5,
+    600
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_preheat",
+   "label": "Plug heats in still air for",
+   "value": "10",
+   "seconds": [
+    0,
+    60
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_igniter",
+   "label": "Igniter with air for",
+   "value": "30",
+   "seconds": [
+    5,
+    300
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_wait",
+   "label": "Then waits for a flame",
+   "value": "90",
+   "seconds": [
+    10,
+    600
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_tries",
+   "label": "Attempts at lighting",
+   "value": "3",
+   "months": [
+    1,
+    8
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_kindle_pa",
+   "label": "Draught of lighting",
+   "value": "51",
+   "months": [
+    0,
+    300
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_pa",
+   "label": "Draught of the step",
+   "value": "51",
+   "months": [
+    0,
+    300
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_dose",
+   "label": "Dose of pellets",
+   "value": "32",
+   "seconds": [
+    1,
+    120
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_pause",
+   "label": "Pause after a dose",
+   "value": "15",
+   "seconds": [
+    1,
+    600
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "auto_pump_on_c",
+   "label": "Pump runs from",
+   "value": "45",
+   "months": [
+    20,
+    85
+   ],
+   "card": "automaton"
+  },
+  {
+   "name": "igniter_limit",
+   "label": "Igniter turns off after",
+   "value": "300",
+   "seconds": [
+    10,
+    300
+   ],
+   "card": "relays",
+   "note": "5 min"
+  },
+  {
+   "name": "auger_limit",
+   "label": "Auger stops after",
+   "value": "60",
+   "seconds": [
+    10,
+    600
+   ],
+   "card": "relays",
+   "note": "1 min"
+  },
+  {
+   "name": "role_ntc_1",
+   "label": "Socket 1 measures",
+   "value": "supply",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_2",
+   "label": "Socket 2 measures",
+   "value": "return",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_3",
+   "label": "Socket 3 measures",
+   "value": "boiler",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_4",
+   "label": "Socket 4 measures",
+   "value": "room",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_5",
+   "label": "Socket 5 measures",
+   "value": "free",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_6",
+   "label": "Socket 6 measures",
+   "value": "free",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "role_ntc_7",
+   "label": "Socket 7 measures",
+   "value": "free",
+   "options": [
+    {
+     "value": "free",
+     "words": "nothing plugged in - not shown on the page"
+    },
+    {
+     "value": "boiler",
+     "words": "water in the boiler - at its top, what the burner holds"
+    },
+    {
+     "value": "supply",
+     "words": "water leaving the boiler"
+    },
+    {
+     "value": "return",
+     "words": "water coming back"
+    },
+    {
+     "value": "flue",
+     "words": "flue gas"
+    },
+    {
+     "value": "hopper",
+     "words": "the pellet hopper"
+    },
+    {
+     "value": "room",
+     "words": "the boiler room"
+    },
+    {
+     "value": "own",
+     "words": "something else",
+     "takes": "what it measures, in your own words"
+    }
+   ]
+  },
+  {
+   "name": "ntc_address",
+   "label": "Module answers at",
+   "value": "2",
+   "months": [
+    1,
+    247
+   ],
+   "card": "temperatures"
+  },
+  {
+   "name": "poll_every",
+   "label": "Read every",
+   "value": "2",
+   "seconds": [
+    1,
+    60
+   ],
+   "card": "temperatures"
+  },
+  {
+   "name": "draught_pa",
+   "label": "Hold the draught at",
+   "value": "31",
+   "months": [
+    0,
+    300
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "fan_min",
+   "label": "Fan, lowest it is held at",
+   "value": "8",
+   "months": [
+    5,
+    60
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "fan_max",
+   "label": "Fan, highest it is held at",
+   "value": "80",
+   "months": [
+    20,
+    100
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "fan_step",
+   "label": "Fan, most it moves a second",
+   "value": "5",
+   "months": [
+    1,
+    50
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "up_kp",
+   "label": "Pushing up, by the miss in angle",
+   "value": "150",
+   "months": [
+    0,
+    2000
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "up_ki",
+   "label": "Pushing up, by how long the miss lasts",
+   "value": "45",
+   "months": [
+    0,
+    2000
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "down_kp",
+   "label": "Letting go, by the miss in angle",
+   "value": "150",
+   "months": [
+    0,
+    2000
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "down_ki",
+   "label": "Letting go, by how long the miss lasts",
+   "value": "30",
+   "months": [
+    0,
+    2000
+   ],
+   "card": "fan"
+  },
+  {
+   "name": "div_top",
+   "label": "From the sensor",
+   "value": "9000",
+   "months": [
+    100,
+    1000000
+   ],
+   "card": "draught"
+  },
+  {
+   "name": "div_bottom",
+   "label": "To ground",
+   "value": "9000",
+   "months": [
+    100,
+    1000000
+   ],
+   "card": "draught",
+   "note": "The divider puts no pressure at 250 mV of this pin"
+  },
+  {
+   "name": "flame_lit",
+   "label": "Seen at or under",
+   "value": "2400",
+   "months": [
+    100,
+    3300
+   ],
+   "card": "flame"
+  },
+  {
+   "name": "flame_steady",
+   "label": "Steady at or under",
+   "value": "1100",
+   "months": [
+    100,
+    3300
+   ],
+   "card": "flame",
+   "note": "steady 1100 mV sits under seen 2400 mV, as it must"
+  }
+ ]
+}

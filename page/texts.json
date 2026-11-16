@@ -1,0 +1,317 @@
+{
+ "rows": {
+  "system/console": {
+   "label": "console",
+   "says": [
+    [
+     "0",
+     "0"
+    ],
+    [
+     "number",
+     "{}"
+    ]
+   ],
+   "level": [
+    [
+     "*",
+     "dim"
+    ]
+   ]
+  },
+  "system/wifi": {
+   "label": "wifi",
+   "says": [
+    [
+     "joined",
+     "{ip} · {ssid}"
+    ],
+    [
+     "not_joined",
+     "offline"
+    ]
+   ],
+   "level": [
+    [
+     "joined",
+     "ok"
+    ],
+    [
+     "not_joined",
+     "bad"
+    ]
+   ]
+  },
+  "system/time": {
+   "label": "time",
+   "says": [
+    [
+     "text&from=gateway",
+     "{} {zone} · router"
+    ],
+    [
+     "text&from=none",
+     "{} {zone}"
+    ],
+    [
+     "text",
+     "{} {zone} · {from}"
+    ],
+    [
+     "unknown:not_joined",
+     "-"
+    ],
+    [
+     "unknown:silent&router_silent=on&silent=none",
+     "silent · router"
+    ],
+    [
+     "unknown:silent&router_silent=on",
+     "silent · router, {silent}"
+    ],
+    [
+     "unknown:silent",
+     "silent · {silent}"
+    ]
+   ]
+  },
+  "settings/time.note": {
+   "says": [
+    [
+     "came_from",
+     ""
+    ],
+    [
+     "came_from_at",
+     ""
+    ],
+    [
+     "silent_time_kept",
+     "the servers chosen have not answered yet; the time kept is the last one"
+    ],
+    [
+     "no_answer",
+     "no server has answered yet"
+    ]
+   ]
+  }
+ },
+ "settings": {
+  "time": {
+   "choices": [
+    {
+     "value": "auto",
+     "words": "auto"
+    },
+    {
+     "value": "internet",
+     "words": "internet"
+    },
+    {
+     "value": "server",
+     "words": "server",
+     "takes": "the server's name or address"
+    }
+   ],
+   "label": "Time comes from",
+   "note": "note"
+  },
+  "zone": {
+   "choices": [
+    {
+     "value": "gmt+2",
+     "words": "GMT+2"
+    },
+    {
+     "value": "gmt+1",
+     "words": "GMT+1"
+    },
+    {
+     "value": "gmt",
+     "words": "GMT"
+    },
+    {
+     "value": "gmt+3",
+     "words": "GMT+3"
+    },
+    {
+     "value": "utc",
+     "words": "UTC"
+    }
+   ],
+   "label": "Time zone"
+  },
+  "net_point_tries": {
+   "label": "Failed joins in a row before the next access point"
+  },
+  "net_reset_laps": {
+   "label": "Laps without a network before the radio is reset"
+  },
+  "net_reboot_laps": {
+   "label": "Laps after the reset before the board restarts"
+  }
+ },
+ "now": {},
+ "fold": {
+  "show": "Settings",
+  "hide": "Hide settings"
+ },
+ "ru": {
+  "rows": {
+   "system/console": {
+    "label": "консоль",
+    "says": [
+     [
+      "0",
+      "0"
+     ],
+     [
+      "number",
+      "{}"
+     ]
+    ],
+    "level": [
+     [
+      "*",
+      "dim"
+     ]
+    ]
+   },
+   "system/wifi": {
+    "label": "wifi",
+    "says": [
+     [
+      "joined",
+      "{ip} · {ssid}"
+     ],
+     [
+      "not_joined",
+      "отключён"
+     ]
+    ],
+    "level": [
+     [
+      "joined",
+      "ok"
+     ],
+     [
+      "not_joined",
+      "bad"
+     ]
+    ]
+   },
+   "system/time": {
+    "label": "время",
+    "says": [
+     [
+      "text&from=gateway",
+      "{} {zone} · роутер"
+     ],
+     [
+      "text&from=none",
+      "{} {zone}"
+     ],
+     [
+      "text",
+      "{} {zone} · {from}"
+     ],
+     [
+      "unknown:not_joined",
+      "-"
+     ],
+     [
+      "unknown:silent&router_silent=on&silent=none",
+      "молчит · роутер"
+     ],
+     [
+      "unknown:silent&router_silent=on",
+      "молчит · роутер, {silent}"
+     ],
+     [
+      "unknown:silent",
+      "молчит · {silent}"
+     ]
+    ]
+   },
+   "settings/time.note": {
+    "says": [
+     [
+      "came_from",
+      ""
+     ],
+     [
+      "came_from_at",
+      ""
+     ],
+     [
+      "silent_time_kept",
+      "выбранные серверы пока не ответили, время взято прежнее"
+     ],
+     [
+      "no_answer",
+      "ни один сервер пока не ответил"
+     ]
+    ]
+   }
+  },
+  "settings": {
+   "time": {
+    "label": "Откуда время",
+    "choices": [
+     {
+      "value": "auto",
+      "words": "авто"
+     },
+     {
+      "value": "internet",
+      "words": "интернет"
+     },
+     {
+      "value": "server",
+      "words": "сервер",
+      "takes": "имя или адрес сервера"
+     }
+    ],
+    "note": "note"
+   },
+   "zone": {
+    "label": "Часовой пояс",
+    "choices": [
+     {
+      "value": "gmt+2",
+      "words": "GMT+2"
+     },
+     {
+      "value": "gmt+1",
+      "words": "GMT+1"
+     },
+     {
+      "value": "gmt",
+      "words": "GMT"
+     },
+     {
+      "value": "gmt+3",
+      "words": "GMT+3"
+     },
+     {
+      "value": "utc",
+      "words": "UTC"
+     }
+    ]
+   },
+   "net_point_tries": {
+    "label": "Срывов подряд до другой точки"
+   },
+   "net_reset_laps": {
+    "label": "Кругов без сети до сброса радио"
+   },
+   "net_reboot_laps": {
+    "label": "Кругов после сброса до перезапуска"
+   }
+  },
+  "fold": {
+   "show": "Настройки",
+   "hide": "Скрыть настройки"
+  }
+ }
+}

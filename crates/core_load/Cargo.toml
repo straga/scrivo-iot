@@ -1,0 +1,5 @@
+[package]
+name = "core_load"
+version = "0.1.0"
+edition.workspace = true
+description = "How busy each core of the board is: the share of a window its idle task did not run, from the counters the kernel keeps"

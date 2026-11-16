@@ -1,0 +1,27 @@
+[package]
+name = "between"
+version = "0.1.0"
+edition.workspace = true
+description = "What passes between the board's tasks: the raw lock under every channel, the wait, and an owner's desk where other tasks ask and are answered"
+
+[dependencies]
+embassy-sync = { workspace = true }
+embassy-time = { workspace = true }
+# the driver of embassy-time on the steady clock (steady_time.rs); a tick of a microsecond, as esp_timer counts
+embassy-time-driver = { workspace = true }
+
+# The wait sleeps until woken. On the board IDF's own block_on: it parks the task on a FreeRTOS notification
+# (esp-idf-hal task.rs, Notification::wait_any). embassy_futures::block_on is a busy loop - 100 % CPU per waiter.
+[target.'cfg(target_os = "espidf")'.dependencies]
+esp-idf-svc = { workspace = true }
+# round::ON_STACK_AT_MOST: what a future handed to block_on may weigh on a task's stack
+round = { workspace = true }
+
+# the CPU a thread has taken, which a step of the loop is measured by on the host (steps.rs)
+[target.'cfg(not(target_os = "espidf"))'.dependencies]
+libc = "0.2"
+
+[dev-dependencies]
+# on the host: a clock and a critical section of std; on the board esp-idf-svc gives both
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }

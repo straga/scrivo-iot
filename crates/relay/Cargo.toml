@@ -1,0 +1,25 @@
+[package]
+name = "relay"
+version = "0.1.0"
+edition.workspace = true
+description = "The relays of a board and the one owner that switches them: commands through a bounded queue"
+
+[dependencies]
+page = { workspace = true }
+embassy-sync = { workspace = true }
+# the lock under the channels between tasks: a FreeRTOS mutex on the board
+between = { workspace = true }
+
+[target.'cfg(target_os = "espidf")'.dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+round = { workspace = true }
+
+[dev-dependencies]
+# the grams a rhythm of the relay comes to (tests/feeding.rs)
+pellets = { workspace = true }
+# on the host the owners' desks (between) wait by embassy-time, and std gives its clock
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+# on the host: a critical section of std under the channels' lock (between); on the board the lock is a FreeRTOS
+# mutex
+critical-section = { version = "1", features = ["std"] }

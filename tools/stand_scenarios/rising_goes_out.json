@@ -1,0 +1,8 @@
+{
+  "about": "Lit as in lighting.json, and the flame goes out for good 20 s into rising: the burner never comes to work and the auger never turns after the flame showed.",
+  "seconds": 330,
+  "press": [[2, "start"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [115, 900], [116, 3150]],
+  "boiler_c": [[0, 38], [330, 52]],
+  "flue_c": [[0, 24], [100, 30], [330, 120]]
+}

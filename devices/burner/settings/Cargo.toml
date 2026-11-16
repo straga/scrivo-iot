@@ -1,0 +1,23 @@
+[package]
+name = "burner_settings"
+version = "0.1.0"
+edition.workspace = true
+description = "The burner's settings and the rules of its set: every number of the fire, the fan, the draught, the pellets and the sockets, what an older image kept and what it means now - the burner's own, so that no other board has them in its image"
+
+[dependencies]
+settings = { workspace = true }
+draught = { workspace = true }
+dimmer = { workspace = true }
+regulator = { workspace = true }
+automaton = { workspace = true }
+thermostat = { workspace = true }
+demand = { workspace = true }
+schedule = { workspace = true }
+
+[dev-dependencies]
+# the first burner's mapping of the same settings to the same tuning: what the rows hold automaton_tuning to (tests/automaton_tuning.rs)
+automaton_card = { workspace = true }
+burner_api = { workspace = true }
+serde_json = { workspace = true }
+# the local time of a synthetic instant by the POSIX rule of a zone, as the board's libc reads it (tests/schedule_by_zone.rs)
+libc = "0.2"

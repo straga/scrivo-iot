@@ -1,0 +1,8 @@
+{
+  "about": "A cold boiler lit from a stop: Start at 2 s, the flame shows 20 s after the first dose, steady from then on; the water warms but stays under the step's want, so the fire works and does not smoulder.",
+  "seconds": 330,
+  "press": [[2, "start"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900]],
+  "boiler_c": [[0, 38], [330, 52]],
+  "flue_c": [[0, 24], [100, 30], [330, 120]]
+}

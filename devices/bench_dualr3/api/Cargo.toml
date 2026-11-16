@@ -1,0 +1,17 @@
+[package]
+name = "bench_dualr3_api"
+version = "0.1.0"
+edition.workspace = true
+description = "What the Sonoff Dual R3 says outward: the dictionary of its entities - two relays, two wall keys, the BL0939 meter, the energy counted - and their values; a crate of its own so that it cannot reach the hardware"
+
+[dependencies]
+relay = { workspace = true }
+switch = { workspace = true }
+page = { workspace = true }
+dictionary = { workspace = true }
+settings = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }
+# the window of askings the meter counts packets over: the one number this table repeats, held to its source
+bl0939 = { workspace = true }

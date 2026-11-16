@@ -1,0 +1,19 @@
+[package]
+name = "analog"
+version = "0.1.0"
+edition.workspace = true
+description = "What many samples of one analog pin come to: the number the board goes on, and what those samples ranged over"
+
+[target.'cfg(target_os = "espidf")'.dependencies]
+log = { workspace = true }
+esp-idf-svc = { workspace = true }
+# the board's steady clock, for the spans a round holds and waits (gauge); it never leaps with the chip's counter
+between = { workspace = true }
+
+[build-dependencies]
+# `espidf` is asked for here: on a computer nothing else in the build turns it on, and the build script names it
+embuild = { workspace = true, features = ["espidf"] }
+
+[dev-dependencies]
+# the steady clock's PAD, which a limit of a window has to stay clear of (tests/gather.rs)
+between = { workspace = true }

@@ -1,0 +1,5 @@
+[package]
+name = "dimmer"
+version = "0.1.0"
+edition.workspace = true
+description = "The phase dimmer's arithmetic: a percent into a delay from the zero crossing, and a gate pulse that never reaches the next one"

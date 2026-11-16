@@ -1,0 +1,545 @@
+{
+ "modules": {
+  "relays": {
+   "card": {
+    "title": {
+     "en": "relays",
+     "ru": "реле"
+    }
+   },
+   "rows": {
+    "relay1": {
+     "label": {
+      "en": "relay 1 (L1)",
+      "ru": "реле 1 (L1)"
+     },
+     "says": [
+      [
+       "on",
+       {
+        "en": "on",
+        "ru": "вкл"
+       }
+      ],
+      [
+       "off",
+       {
+        "en": "off",
+        "ru": "выкл"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "on",
+       "ok"
+      ]
+     ]
+    },
+    "relay2": {
+     "label": {
+      "en": "relay 2 (L2)",
+      "ru": "реле 2 (L2)"
+     },
+     "says": [
+      [
+       "on",
+       {
+        "en": "on",
+        "ru": "вкл"
+       }
+      ],
+      [
+       "off",
+       {
+        "en": "off",
+        "ru": "выкл"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "on",
+       "ok"
+      ]
+     ]
+    }
+   }
+  },
+  "switches": {
+   "card": {
+    "title": {
+     "en": "switches on the wall",
+     "ru": "выключатели на стене"
+    }
+   },
+   "rows": {
+    "switch1": {
+     "label": {
+      "en": "switch 1 (S1)",
+      "ru": "выключатель 1 (S1)"
+     },
+     "says": [
+      [
+       "on",
+       {
+        "en": "closed · {toggles} toggles",
+        "ru": "замкнут · {toggles} нажатий"
+       }
+      ],
+      [
+       "off",
+       {
+        "en": "open · {toggles} toggles",
+        "ru": "разомкнут · {toggles} нажатий"
+       }
+      ]
+     ]
+    },
+    "switch2": {
+     "label": {
+      "en": "switch 2 (S2)",
+      "ru": "выключатель 2 (S2)"
+     },
+     "says": [
+      [
+       "on",
+       {
+        "en": "closed · {toggles} toggles",
+        "ru": "замкнут · {toggles} нажатий"
+       }
+      ],
+      [
+       "off",
+       {
+        "en": "open · {toggles} toggles",
+        "ru": "разомкнут · {toggles} нажатий"
+       }
+      ]
+     ]
+    }
+   }
+  },
+  "meter": {
+   "card": {
+    "title": {
+     "en": "meter",
+     "ru": "счётчик"
+    }
+   },
+   "rows": {
+    "voltage": {
+     "label": {
+      "en": "voltage",
+      "ru": "напряжение"
+     },
+     "says": [
+      [
+       "number",
+       {
+        "en": "{:.1} V",
+        "ru": "{:.1} В"
+       }
+      ],
+      [
+       "unknown:not_read",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "none",
+       "dim"
+      ]
+     ]
+    },
+    "l1": {
+     "label": {
+      "en": "L1",
+      "ru": "L1"
+     },
+     "says": [
+      [
+       "number",
+       {
+        "en": "{amps:.3} A · {:.1} W",
+        "ru": "{amps:.3} А · {:.1} Вт"
+       }
+      ],
+      [
+       "unknown:not_read",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "none",
+       "dim"
+      ]
+     ]
+    },
+    "l2": {
+     "label": {
+      "en": "L2",
+      "ru": "L2"
+     },
+     "says": [
+      [
+       "number",
+       {
+        "en": "{amps:.3} A · {:.1} W",
+        "ru": "{amps:.3} А · {:.1} Вт"
+       }
+      ],
+      [
+       "unknown:not_read",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "none",
+       "dim"
+      ]
+     ]
+    },
+    "packets": {
+     "label": {
+      "en": "packets",
+      "ru": "пакеты"
+     },
+     "says": [
+      [
+       "ok",
+       {
+        "en": "{accepted}/{window} · {rejected} bad · {missed} lost",
+        "ru": "{accepted}/{window} · {rejected} плохих · {missed} потеряно"
+       }
+      ],
+      [
+       "losing",
+       {
+        "en": "{accepted}/{window} · {rejected} bad · {missed} lost",
+        "ru": "{accepted}/{window} · {rejected} плохих · {missed} потеряно"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "ok",
+       "ok"
+      ],
+      [
+       "losing",
+       "bad"
+      ]
+     ]
+    },
+    "last": {
+     "label": {
+      "en": "last window",
+      "ru": "прошлое окно"
+     },
+     "says": [
+      [
+       "ok",
+       {
+        "en": "{rejected} bad · {missed} lost · {window} total",
+        "ru": "{rejected} плохих · {missed} потеряно · {window} всего"
+       }
+      ],
+      [
+       "losing",
+       {
+        "en": "{rejected} bad · {missed} lost · {window} total",
+        "ru": "{rejected} плохих · {missed} потеряно · {window} всего"
+       }
+      ],
+      [
+       "unknown:no_window",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ],
+     "level": [
+      [
+       "ok",
+       "ok"
+      ],
+      [
+       "losing",
+       "bad"
+      ]
+     ]
+    }
+   }
+  },
+  "energy": {
+   "card": {
+    "title": {
+     "en": "energy",
+     "ru": "энергия"
+    }
+   },
+   "rows": {
+    "today": {
+     "label": {
+      "en": "today",
+      "ru": "сегодня"
+     },
+     "says": [
+      [
+       "unknown:day_unsure",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ],
+      [
+       "number",
+       {
+        "en": "L1 {l1:.3} · L2 {l2:.3} · {:.3} kWh",
+        "ru": "L1 {l1:.3} · L2 {l2:.3} · {:.3} кВт·ч"
+       }
+      ],
+      [
+       "unknown:not_counting",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ]
+    },
+    "month": {
+     "label": {
+      "en": "this month",
+      "ru": "за месяц"
+     },
+     "says": [
+      [
+       "unknown:day_unsure",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ],
+      [
+       "number",
+       {
+        "en": "L1 {l1:.3} · L2 {l2:.3} · {:.3} kWh",
+        "ru": "L1 {l1:.3} · L2 {l2:.3} · {:.3} кВт·ч"
+       }
+      ],
+      [
+       "unknown:not_counting",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ]
+    },
+    "total": {
+     "label": {
+      "en": "in all",
+      "ru": "всего"
+     },
+     "says": [
+      [
+       "number",
+       {
+        "en": "L1 {l1:.3} · L2 {l2:.3} · {:.3} kWh",
+        "ru": "L1 {l1:.3} · L2 {l2:.3} · {:.3} кВт·ч"
+       }
+      ],
+      [
+       "unknown:not_counting",
+       {
+        "en": "-",
+        "ru": "-"
+       }
+      ]
+     ]
+    },
+    "reset": {
+     "label": {
+      "en": "Zero the counters",
+      "ru": "Обнулить счётчики"
+     },
+     "says": [
+      [
+       "none",
+       {
+        "en": "",
+        "ru": ""
+       }
+      ]
+     ]
+    }
+   },
+   "settings": {
+    "rows": {
+     "label": {
+      "en": "History, a row every",
+      "ru": "История, строка раз в"
+     }
+    },
+    "keep": {
+     "label": {
+      "en": "History, months kept",
+      "ru": "История, месяцев хранить"
+     },
+     "note": "note"
+    }
+   },
+   "notes": {
+    "keep.note": {
+     "says": [
+      [
+       "fits",
+       {
+        "en": "about {month_kb} KB a month, {all_kb} KB for the months kept, of the board's {fs_kb} KB",
+        "ru": "около {month_kb} КБ в месяц, {all_kb} КБ за все месяцы, из {fs_kb} КБ платы"
+       }
+      ],
+      [
+       "over",
+       {
+        "en": "about {month_kb} KB a month, {all_kb} KB for the months kept - more than the board's {fs_kb} KB: the oldest months go sooner",
+        "ru": "около {month_kb} КБ в месяц, {all_kb} КБ за все месяцы - больше, чем {fs_kb} КБ платы: старые месяцы уйдут раньше"
+       }
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "tree": {
+  "modules": {
+   "groups": [
+    {
+     "id": "hardware",
+     "title": {
+      "en": "Hardware",
+      "ru": "Железо"
+     },
+     "modules": [
+      "relays",
+      "switches",
+      "meter",
+      "energy"
+     ]
+    }
+   ],
+   "pages": [
+    {
+     "id": "relays",
+     "title": {
+      "en": "Relays",
+      "ru": "Реле"
+     },
+     "sections": [
+      {
+       "id": "relays",
+       "cards": [
+        "relays"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "switches",
+     "title": {
+      "en": "Switches",
+      "ru": "Выключатели"
+     },
+     "sections": [
+      {
+       "id": "switches",
+       "cards": [
+        "switches"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "meter",
+     "title": {
+      "en": "Meter",
+      "ru": "Счётчик"
+     },
+     "sections": [
+      {
+       "id": "meter",
+       "cards": [
+        "meter"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "energy",
+     "title": {
+      "en": "Energy",
+      "ru": "Энергия"
+     },
+     "sections": [
+      {
+       "id": "energy",
+       "cards": [
+        "energy"
+       ],
+       "settings": [
+        "rows",
+        "keep"
+       ],
+       "actions": [
+        "energy/reset"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "main": {
+   "sections": [
+    {
+     "id": "relays",
+     "cards": [
+      "relays"
+     ]
+    },
+    {
+     "id": "switches",
+     "cards": [
+      "switches"
+     ]
+    },
+    {
+     "id": "meter",
+     "cards": [
+      "meter"
+     ]
+    },
+    {
+     "id": "energy",
+     "cards": [
+      "energy"
+     ]
+    }
+   ]
+  }
+ }
+}

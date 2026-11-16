@@ -1,0 +1,8 @@
+{
+  "about": "As work_flame_gone.json, and a person presses Stop at 210 s, ten seconds into the dark: the burner goes to burning off at once and does not wait for the flame.",
+  "seconds": 330,
+  "press": [[2, "start"], [210, "stop"]],
+  "flame_mv": [[0, 3150], [94, 3150], [95, 1800], [104, 1800], [105, 900], [199, 900], [200, 3150]],
+  "boiler_c": [[0, 38], [330, 52]],
+  "flue_c": [[0, 24], [100, 30], [330, 95]]
+}

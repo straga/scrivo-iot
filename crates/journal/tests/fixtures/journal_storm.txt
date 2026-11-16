@@ -1,0 +1,71 @@
+2026-10-25 04:21:32 W (53273370) analog::board: draught: a window held the unit past 150 ms and was cut after 5 of 20 samples
+2026-10-25 04:21:32 W (53273550) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:32 W (53273730) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:32 W (53273910) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:32 W (53274090) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53274270) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53274450) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53274630) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53274810) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53274990) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:33 W (53275170) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53275350) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53275530) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53275711) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53275890) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53276070) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:34 W (53276250) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:35 W (53276431) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:35 W (53276610) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:35 W (53276790) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:35 W (53276970) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:35 W (53277150) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53277330) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53277510) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53277690) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53277870) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53278050) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:36 W (53278230) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:37 W (53278410) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:37 W (53278590) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:37 W (53278770) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:37 W (53278950) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:37 W (53279130) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53279310) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53279490) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53279670) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53279850) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53280030) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:38 W (53280210) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53280390) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53280570) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53280750) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53280930) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53281110) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53281337) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53281500) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53281680) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53281860) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53282040) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:40 W (53282220) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:41 W (53282400) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:41 W (53282580) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:41 W (53282760) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:41 W (53282940) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:41 W (53283120) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:42 W (53283300) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:42 W (53283480) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:42 W (53283660) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:42 W (53283840) analog::board: draught: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:42 W (53284020) analog::board: flame: a window held the unit past 150 ms and was cut after 6 of 20 samples
+2026-10-25 04:21:39 W (53280271) burner::hardware::fan_gate: fan: 29 crossings lost by gaps in the counting, the ring of edges written over 0 times before th…
+2026-10-25 04:22:39 W (53340271) burner::hardware::fan_gate: fan: 14 crossings lost by gaps in the counting, the ring of edges written over 0 times before th…
+2026-10-25 04:22:44 I (53345281) burner::hardware::fan_gate: fan: mains 10098 µs a half cycle, over 10 s of counting
+2026-10-25 04:22:54 I (53356261) burner::hardware::fan_gate: fan: mains 9993 µs a half cycle, over 10 s of counting
+2026-10-25 04:23:39 W (53400271) burner::hardware::fan_gate: fan: 4 crossings lost by gaps in the counting, the ring of edges written over 0 times before the…
+2026-10-25 04:24:39 W (53460272) burner::hardware::fan_gate: fan: 7 crossings lost by gaps in the counting, the ring of edges written over 0 times before the…
+2026-10-25 04:25:39 W (53520271) burner::hardware::fan_gate: fan: 9 crossings lost by gaps in the counting, the ring of edges written over 0 times before the…
+2026-10-25 04:25:53 I (53534281) burner::hardware::fan_gate: fan: mains 10058 µs a half cycle, over 10 s of counting
+2026-10-25 04:26:03 I (53545262) burner::hardware::fan_gate: fan: mains 10003 µs a half cycle, over 10 s of counting
+2026-10-25 04:26:39 W (53580271) burner::hardware::fan_gate: fan: 16 crossings lost by gaps in the counting, the ring of edges written over 0 times before th…
+2026-10-25 04:26:45 I (53587261) burner::hardware::fan_gate: fan: mains 10073 µs a half cycle, over 10 s of counting

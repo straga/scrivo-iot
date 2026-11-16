@@ -1,0 +1,24 @@
+{
+ "rows": {
+  "settings/auger_limit": {
+   "says": [
+    [
+     "text",
+     "{:span}"
+    ]
+   ]
+  }
+ },
+ "ru": {
+  "rows": {
+   "settings/auger_limit": {
+    "says": [
+     [
+      "text",
+      "{:span}"
+     ]
+    ]
+   }
+  }
+ }
+}

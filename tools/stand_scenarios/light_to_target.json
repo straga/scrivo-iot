@@ -1,0 +1,107 @@
+{
+ "about": "29.10 15:31: the room at 21.1 °C under a target of 22 with a band of 2, coming down from above (warm inside the band), the water 36 °C. Start at 2 s leaves the burner standing (the house says warm); a Light at 40 s lights it, and the fire must go on burning until the room reaches 22 °C (at about 357 s), and only then go down to smouldering - on 29.10 it went to smouldering one second after it came to work.",
+ "seconds": 520,
+ "press": [
+  [
+   2,
+   "start"
+  ],
+  [
+   40,
+   "light"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   132,
+   3150
+  ],
+  [
+   133,
+   1800
+  ],
+  [
+   142,
+   1800
+  ],
+  [
+   143,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   36
+  ],
+  [
+   500,
+   56
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   140,
+   30
+  ],
+  [
+   500,
+   120
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   500,
+   50
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   500,
+   44
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   21.1
+  ],
+  [
+   150,
+   21.1
+  ],
+  [
+   450,
+   22.4
+  ],
+  [
+   520,
+   22.4
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_asked_by": "room",
+  "auto_room_c": "22",
+  "auto_room_gap_c": "2"
+ }
+}

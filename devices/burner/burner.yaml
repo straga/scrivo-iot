@@ -1,0 +1,36 @@
+# THE BURNER AS IT IS ASSEMBLED: the board it runs on, the level that closes its relays, and each module it has with the pins that module is wired to.
+# Read by the build (tools/board_env.py): the board gives the target and the chip, every pin is checked against the board's board.yml - one the board does
+# not bring out, or the system holds, stops the build with the reason. NOT HERE: what a module means (crates/), what it says outward (api/), how the page
+# shows it (page/menu.json). A module is named here and in src/modules/, and nowhere else.
+device: burner
+board: STRAGA_BASE_S3
+
+# the prototype's relays were inverted: a low level closes one
+relays_close_on: low
+
+modules:
+  relays:                  # the auger, the igniter, the pump and the power of the modules on the bus
+    auger: GPIO13
+    igniter: GPIO14
+    pump: GPIO15
+    aux_power: GPIO21
+  temperatures:            # the water's sensors on the RS485 bus, Modbus RTU 9600 8N1; the converter switches direction by itself
+    bus_tx: GPIO17
+    bus_rx: GPIO16
+  flue:                    # the MAX6675 thermocouple of the flue, on SPI, three wires, 3.3 V
+    flue_sck: GPIO38
+    flue_cs: GPIO39
+    flue_so: GPIO40
+  fan:                     # the phase dimmer: the zero-crossing detector talks in, the triac's gate listens out
+    zc: GPIO41
+    dim: GPIO42
+  draught:                 # the pressure sensor behind its divider, on ADC1
+    draught_pin: GPIO4
+  flame:                   # the photoresistor, on ADC1 beside the draught
+    flame_pin: GPIO7
+  automaton: {}            # the burner's cycle: no pins of its own, it commands the modules above
+  soot: {}                # how dirty the boiler is: the flue minus the water over the burns, the pellets since the cleaning; no pins of its own
+  pellets: {}              # the pellets burned: counted from the seconds the auger turns, no pins of its own
+
+# what the device's settings start from where nvs holds none; the pages' own changes are never overwritten by it
+settings: {}

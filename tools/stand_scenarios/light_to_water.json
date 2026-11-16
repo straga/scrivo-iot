@@ -1,0 +1,103 @@
+{
+  "about": "A light by the person's press when nobody asks for heat and no room is read: the cycle runs by the water alone (the manual cycle of the water), the room sensor has no role. The press of Start at 2 s and of Light at 40 s are the same as in light_to_target.json.",
+  "seconds": 520,
+  "press": [
+    [
+      2,
+      "start"
+    ],
+    [
+      40,
+      "light"
+    ]
+  ],
+  "flame_mv": [
+    [
+      0,
+      3150
+    ],
+    [
+      132,
+      3150
+    ],
+    [
+      133,
+      1800
+    ],
+    [
+      142,
+      1800
+    ],
+    [
+      143,
+      900
+    ]
+  ],
+  "boiler_c": [
+    [
+      0,
+      36
+    ],
+    [
+      500,
+      56
+    ]
+  ],
+  "flue_c": [
+    [
+      0,
+      24
+    ],
+    [
+      140,
+      30
+    ],
+    [
+      500,
+      120
+    ]
+  ],
+  "supply_c": [
+    [
+      0,
+      36
+    ],
+    [
+      500,
+      50
+    ]
+  ],
+  "return_c": [
+    [
+      0,
+      30
+    ],
+    [
+      500,
+      44
+    ]
+  ],
+  "room_c": [
+    [
+      0,
+      21.1
+    ],
+    [
+      150,
+      21.1
+    ],
+    [
+      450,
+      22.4
+    ],
+    [
+      520,
+      22.4
+    ]
+  ],
+  "settings": {
+    "role_ntc_1": "boiler",
+    "role_ntc_2": "supply",
+    "role_ntc_3": "return"
+  }
+}

@@ -1,0 +1,68 @@
+{
+ "about": "Lit as in lighting.json and at work; a person presses Stop at 210 s with the flame burning, and the flame goes dark at 241 s: the burning out has no blow behind it while the flame shows - the blow's clock is a dash from 210 s, and counts down from its whole once the flame has been gone for good.",
+ "seconds": 400,
+ "press": [
+  [
+   2,
+   "start"
+  ],
+  [
+   210,
+   "stop"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   240,
+   900
+  ],
+  [
+   241,
+   3150
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   400,
+   52
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   400,
+   95
+  ]
+ ]
+}

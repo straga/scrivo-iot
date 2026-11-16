@@ -1,0 +1,30 @@
+[package]
+name = "automaton_card"
+version = "0.1.0"
+edition.workspace = true
+description = "The automaton's card as the page reads it - its rows, from what the automaton did this second - built without the board, so the board and the page's stand draw it with one code"
+
+[dependencies]
+automaton = { workspace = true }
+thermostat = { workspace = true }
+page = { workspace = true }
+dictionary = { workspace = true }
+settings = { workspace = true }
+burner_settings = { workspace = true }
+burner_api = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+analog = { workspace = true }
+# the roles the scenario publishes the temperatures through: the board's own silence, on the host
+module = { workspace = true }
+between = { workspace = true }
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }
+flame = { workspace = true }
+relay = { workspace = true }
+# the grams the portions of the chain come to (tests/auger_chain.rs)
+pellets = { workspace = true }
+draught = { workspace = true }
+# the rows of the fire it shares with the automaton (tests/common) carry the word of the demand
+demand = { workspace = true }

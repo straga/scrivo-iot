@@ -1,0 +1,14 @@
+# Nothing here names a board: the target, the MCU and the IDF files of a device come from its board through
+# tools/build.sh. Environment variables would override every device's settings in esp-idf-sys.
+
+[target.'cfg(target_os = "espidf")']
+linker = "ldproxy"
+rustflags = [ "--cfg",  "espidf_time64"]
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[env]
+# The SDK of the recovery image, IDF 5.5.2, activated by tools/env.sh: the same partitions, app description,
+# confirmation and rollback on both sides of every board.
+ESP_IDF_TOOLS_INSTALL_DIR = "fromenv"

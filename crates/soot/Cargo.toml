@@ -1,0 +1,8 @@
+[package]
+name = "soot"
+version = "0.1.0"
+edition.workspace = true
+description = "How dirty the boiler is: the median of flue minus water over the burns, the pellets burned since the last cleaning, the snapshot that outlives a power cut - without the hardware"
+
+[dependencies]
+tally.workspace = true

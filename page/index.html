@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{device}}</title>
+  <link rel="icon" href="icon.svg">
+  <link rel="stylesheet" href="app.tw.css">
+  <script src="owl.iife.min.js"></script>
+  <!-- THE THEME IS PUT ON BEFORE ANYTHING IS DRAWN, and that is why it is here and not in page.js: set after the
+       first paint, a page chosen light would flash dark for a moment on every load. No choice kept means no
+       attribute at all - and then the tokens follow the system, which is what a person set once for everything
+       they use. -->
+  <script>try { const t = localStorage.getItem("t"); if (t === "l" || t === "d") document.documentElement.dataset.t = t; } catch (e) {}</script>
+</head>
+<body class="bg-bg text-ink font-sans p-3">
+  <script src="form.js"></script>
+  <script src="wire.js"></script>
+  <script src="dictionary.js"></script>
+  <script src="board.js"></script>
+  <script src="registry.js"></script>
+  <script src="hold.js"></script>
+  <script src="press.js"></script>
+  <script src="page.js"></script>
+  <!--device-->
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Options of the ESP32-S3 base board alone, read after the common sdkconfig.defaults (tools/board_env.py): its chip carries
+# the two megabytes of PSRAM the Sonoff Dual's classic ESP32 does not have, and an image that asks for them on a board
+# without them aborts at the start.
+
+# THE TWO MEGABYTES OF PSRAM ARE SWITCHED ON: two open pages and a relay's click ran the internal
+# heap out - rust_oom with 30 KB free and 10 KB whole (research 6.4). The set is the one measured in 7.1 (.13): on its
+# own the switch gives nothing, the threshold is what moves every allocation over 512 bytes out; the floor under load
+# went 48 220 -> 81 083. What hardware and interrupts touch stays inside by the rules below and by IDF's own defaults:
+# the network (CONFIG_SPIRAM_TRY_ALLOCATE_WIFI_LWIP stays n - measured worse), DMA buffers (MALLOC_CAP_DMA excludes
+# PSRAM), the reserve for them (default).
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_QUAD=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_USE_MALLOC=y
+CONFIG_SPIRAM_MALLOC_ALWAYSINTERNAL=512
+# A task's stack stays inside: on the S3 this is `default y`, and it lifts the check that keeps stacks internal - the
+# zero-crossing handler runs while the cache is off, and a stack behind the cache is one it cannot reach then.
+CONFIG_FREERTOS_TASK_CREATE_ALLOW_EXT_MEM=n

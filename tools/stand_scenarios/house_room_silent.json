@@ -1,0 +1,145 @@
+{
+ "about": "The room that asks goes silent: the target is 21, the room is 18 and then 22 from 200 s, so the house is warm and the working fire goes down to smouldering; at 260 s the sensor of the room says nothing - three periods of its round later (6 s) the role says nothing and the house says cold because its source is silent: the smouldering fire works again, by the water, which is under the line; at 420 s the room answers 22 and the house is warm again.",
+ "seconds": 640,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   95,
+   3150
+  ],
+  [
+   96,
+   1800
+  ],
+  [
+   105,
+   1800
+  ],
+  [
+   106,
+   900
+  ],
+  [
+   520,
+   900
+  ],
+  [
+   530,
+   3150
+  ],
+  [
+   640,
+   3150
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   150,
+   55
+  ],
+  [
+   640,
+   50
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   560,
+   120
+  ],
+  [
+   640,
+   60
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   55
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   45
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ],
+  [
+   199,
+   18
+  ],
+  [
+   200,
+   22
+  ],
+  [
+   259,
+   22
+  ],
+  [
+   260,
+   null
+  ],
+  [
+   419,
+   null
+  ],
+  [
+   420,
+   22
+  ],
+  [
+   640,
+   22
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "90",
+  "auto_step": "6",
+  "auto_asked_by": "room",
+  "auto_room_c": "21",
+  "auto_room_gap_c": "1"
+ }
+}

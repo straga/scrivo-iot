@@ -1,0 +1,5 @@
+[package]
+name = "max6675"
+version = "0.1.0"
+edition.workspace = true
+description = "The MAX6675 word: what sixteen bits off the chip mean - a temperature, an open thermocouple, or no answer at all"

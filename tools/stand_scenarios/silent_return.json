@@ -1,0 +1,84 @@
+{
+ "about": "The burner set to hold the return, working on a return that speaks - and at second 301 the return goes silent, so the role reads nothing from then on. From the third period of the round (2 s) the card says how many seconds it has been silent; ten periods and at least 30 s later the fire is burnt off, naming the return. The boiler goes on reading all the while.",
+ "seconds": 500,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   500,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   30
+  ],
+  [
+   301,
+   null
+  ],
+  [
+   500,
+   null
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   300,
+   140
+  ],
+  [
+   500,
+   145
+  ]
+ ],
+ "settings": {
+  "auto_hold": "return",
+  "auto_hold_c": "40",
+  "role_ntc_1": "boiler",
+  "role_ntc_3": "return"
+ }
+}

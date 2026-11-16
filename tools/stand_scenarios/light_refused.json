@@ -1,0 +1,83 @@
+{
+ "about": "The room at 22.3 °C over a target of 22 (the nominal is reached): a Light at 40 s lights nothing - the burner stands in Stop for the whole run, the refusal not counted.",
+ "seconds": 200,
+ "press": [
+  [
+   2,
+   "start"
+  ],
+  [
+   40,
+   "light"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   200,
+   3150
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   36
+  ],
+  [
+   200,
+   36
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   200,
+   24
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   200,
+   36
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   200,
+   30
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   22.3
+  ],
+  [
+   200,
+   22.3
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_asked_by": "room",
+  "auto_room_c": "22",
+  "auto_room_gap_c": "2"
+ }
+}

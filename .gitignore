@@ -1,0 +1,8 @@
+/.vscode
+/.embuild
+target/
+/target_*/
+/build
+/runs
+__pycache__/
+/tools/page_css/node_modules

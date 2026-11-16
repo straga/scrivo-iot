@@ -1,0 +1,8 @@
+{
+  "name": "page-css",
+  "private": true,
+  "description": "Tailwind for the device pages: tools/page_css.py builds page/app.tw.css with it",
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

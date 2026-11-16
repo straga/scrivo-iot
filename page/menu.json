@@ -1,0 +1,682 @@
+{
+ "version": 1,
+ "units": {
+  "s": {
+   "en": "s",
+   "ru": "с"
+  },
+  "min": {
+   "en": "min",
+   "ru": "мин"
+  },
+  "h": {
+   "en": "h",
+   "ru": "ч"
+  },
+  "Pa": {
+   "en": "Pa",
+   "ru": "Па"
+  },
+  "V": {
+   "en": "V",
+   "ru": "В"
+  },
+  "mV": {
+   "en": "mV",
+   "ru": "мВ"
+  },
+  "kW": {
+   "en": "kW",
+   "ru": "кВт"
+  },
+  "W": {
+   "en": "W",
+   "ru": "Вт"
+  },
+  "A": {
+   "en": "A",
+   "ru": "А"
+  },
+  "°C": {
+   "en": "°C",
+   "ru": "°C"
+  },
+  "%": {
+   "en": "%",
+   "ru": "%"
+  },
+  "Ω": {
+   "en": "Ω",
+   "ru": "Ом"
+  },
+  "/s": {
+   "en": "/s",
+   "ru": "/с"
+  },
+  "ms": {
+   "en": "ms",
+   "ru": "мс"
+  },
+  "dBm": {
+   "en": "dBm",
+   "ru": "дБм"
+  },
+  "bytes": {
+   "en": "bytes",
+   "ru": "байт"
+  },
+  "askings": {
+   "en": "askings",
+   "ru": "запросов"
+  },
+  "attempt": {
+   "en": "attempt",
+   "ru": "попытка"
+  },
+  "attempts": {
+   "en": "attempts",
+   "ru": "попыток"
+  },
+  "consoles": {
+   "en": "consoles",
+   "ru": "консолей"
+  },
+  "kicks": {
+   "en": "kicks",
+   "ru": "толчков"
+  },
+  "samples": {
+   "en": "samples",
+   "ru": "отсчётов"
+  },
+  "units": {
+   "en": "units",
+   "ru": "ед."
+  },
+  "window": {
+   "en": "window",
+   "ru": "окно"
+  },
+  "m%/%": {
+   "en": "‰ per % of miss",
+   "ru": "‰ на % промаха"
+  },
+  "m%/%·s": {
+   "en": "‰ per % per s",
+   "ru": "‰ на % за с"
+  },
+  "kg": {
+   "en": "kg",
+   "ru": "кг"
+  },
+  "g/min": {
+   "en": "g/min",
+   "ru": "г/мин"
+  }
+ },
+ "ui": {
+  "mainTab": {
+   "en": "Main",
+   "ru": "Главная"
+  },
+  "reference": {
+   "en": "Reference",
+   "ru": "Помощь"
+  },
+  "save": {
+   "en": "Save",
+   "ru": "Сохранить"
+  },
+  "stop": {
+   "en": "Stop",
+   "ru": "Стоп"
+  },
+  "send": {
+   "en": "Send",
+   "ru": "Отправить"
+  },
+  "sure": {
+   "en": "Yes, do it",
+   "ru": "Да, выполнить"
+  },
+  "cancel": {
+   "en": "Cancel",
+   "ru": "Отмена"
+  },
+  "irreversible": {
+   "en": "This cannot be taken back.",
+   "ru": "Это нельзя отменить."
+  },
+  "terminal": {
+   "en": "Terminal",
+   "ru": "Консоль"
+  },
+  "now": {
+   "en": "Now",
+   "ru": "Сейчас"
+  },
+  "modules": {
+   "en": "Modules",
+   "ru": "Модули"
+  },
+  "service": {
+   "en": "Service",
+   "ru": "Сервис"
+  },
+  "noModules": {
+   "en": "This device has no module yet.",
+   "ru": "У этого устройства пока нет модулей."
+  },
+  "about": {
+   "en": "About",
+   "ru": "О плате"
+  },
+  "restart": {
+   "en": "restart",
+   "ru": "перезапустить"
+  },
+  "goDown": {
+   "en": "recovery image…",
+   "ru": "аварийный образ…"
+  },
+  "lightDark": {
+   "en": "Light or dark",
+   "ru": "Светлая или тёмная"
+  },
+  "language": {
+   "en": "Language",
+   "ru": "Язык"
+  },
+  "typeToDown": {
+   "en": "Type {board} to send the board to the recovery image. Its page answers at this address in about 20 s.",
+   "ru": "Чтобы отправить плату в аварийный образ, наберите {board}. Страница снова ответит по этому адресу секунд через 20."
+  },
+  "saved": {
+   "en": "Saved.",
+   "ru": "Сохранено."
+  },
+  "nothingChanged": {
+   "en": "Nothing changed.",
+   "ru": "Ничего не изменилось."
+  },
+  "refusals": {
+   "no_setting": {
+    "en": "this board has no setting «{name}»",
+    "ru": "у платы нет настройки «{name}»"
+   },
+   "not_months": {
+    "en": "{label}: «{text}» is not a number of months from {from} to {to}",
+    "ru": "{label}: «{text}» — не число месяцев от {from} до {to}"
+   },
+   "not_seconds": {
+    "en": "{label}: «{text}» is not a number of seconds from {from} to {to}",
+    "ru": "{label}: «{text}» — не число секунд от {from} до {to}"
+   },
+   "not_tenths": {
+    "en": "{label}: «{text}» is not a number from {from} to {to} {unit} with one digit after the point at most",
+    "ru": "{label}: «{text}» — не число от {from} до {to} {unit} с одной цифрой после точки"
+   },
+   "not_whole": {
+    "en": "{label}: «{text}» is not a whole number from {from} to {to}",
+    "ru": "{label}: «{text}» — не целое число от {from} до {to}"
+   },
+   "none_of": {
+    "en": "{label}: «{text}» is none of: {choices}.",
+    "ru": "{label}: «{text}» — не из списка: {choices}."
+   },
+   "none_of_own": {
+    "en": "Your own word goes after «{own}:» — {takes}.",
+    "ru": "Своё слово пишут после «{own}:» — {takes}."
+   },
+   "no_socket": {
+    "en": "{label}: no sensor plays the role «{role}» yet; give one that role first",
+    "ru": "{label}: ни один датчик пока не играет роль «{role}»; сначала назначьте её датчику"
+   },
+   "not_kept": {
+    "en": "the board keeps no settings: its flash did not open",
+    "ru": "плата не хранит настройки: флеш не открылся"
+   },
+   "not_written": {
+    "en": "not saved: the flash did not take the write",
+    "ru": "не сохранено: флеш не принял запись"
+   },
+   "owner_busy": {
+    "en": "the board is busy writing: try again",
+    "ru": "плата занята записью, повторите"
+   },
+   "owner_silent": {
+    "en": "the board did not answer within {within_s} s",
+    "ru": "плата не ответила за {within_s} с"
+   },
+   "value_too_long": {
+    "en": "{label}: a value is at most {max} bytes, this one is {got}",
+    "ru": "{label}: значение не длиннее {max} байт, а здесь {got}"
+   },
+   "nothing_to_save": {
+    "en": "nothing to save",
+    "ru": "нечего сохранять"
+   },
+   "form_too_long": {
+    "en": "the form is longer than {max} bytes; nothing saved",
+    "ru": "форма длиннее {max} байт, ничего не сохранено"
+   },
+   "unknown": {
+    "en": "the board refused with a code this page does not know: {code}",
+    "ru": "плата отказала кодом, которого страница не знает: {code}"
+   }
+  },
+  "boardRestarts": {
+   "en": "the board restarts - it answers at this address again in about {s} s",
+   "ru": "плата перезапускается, по этому адресу ответит секунд через {s}"
+  },
+  "boardGoesDown": {
+   "en": "the board goes to the recovery image - its page answers at this address in about 20 s",
+   "ru": "плата уходит в аварийный образ, её страница ответит по этому адресу секунд через 20"
+  },
+  "notAnswering": {
+   "en": "the board is not answering",
+   "ru": "плата не отвечает"
+  },
+  "pressAccepted": {
+   "en": "Accepted, waiting for the board",
+   "ru": "Принято, жду плату"
+  },
+  "pressAcceptedShort": {
+   "en": "Accepted",
+   "ru": "Принято"
+  },
+  "pressSilent": {
+   "en": "The board did not answer the press in 8 s. Reload the page and press again; if the board does not come back, check its power and the network",
+   "ru": "Плата не ответила на нажатие за 8 с. Перезагрузи страницу и нажми ещё раз; если плата не отвечает, проверь её питание и сеть"
+  },
+  "noStream": {
+   "en": "no stream from the board - two pages may already be open. Asking it every 5 s instead",
+   "ru": "потока от платы нет — возможно, уже открыты две страницы. Спрашиваю раз в 5 секунд"
+  },
+  "didNotAnswer": {
+   "en": "the board did not answer - it may be restarting",
+   "ru": "плата не ответила, возможно, перезапускается"
+  },
+  "consoleOpening": {
+   "en": "opening the board's console…",
+   "ru": "открываю консоль платы…"
+  },
+  "consoleConnected": {
+   "en": "connected",
+   "ru": "подключено"
+  },
+  "consoleClosed": {
+   "en": "the console is closed - leave this tab and come back to open it again",
+   "ru": "консоль закрыта — выйдите с вкладки и вернитесь, чтобы открыть заново"
+  },
+  "consoleUnreachable": {
+   "en": "the console could not be reached",
+   "ru": "до консоли не достучаться"
+  },
+  "notAChoice": {
+   "en": "not a choice this board offers",
+   "ru": "такого выбора у платы нет"
+  },
+  "nothingYet": {
+   "en": "nothing yet",
+   "ru": "пока ничего"
+  },
+  "fit": {
+   "en": "fit",
+   "ru": "по кривой"
+  },
+  "on": {
+   "en": "On",
+   "ru": "Вкл"
+  },
+  "off": {
+   "en": "Off",
+   "ru": "Выкл"
+  },
+  "memory": {
+   "en": "{free} free · {used} used",
+   "ru": "{free} свободно · {used} занято"
+  },
+  "badBoard": {
+   "en": "{named} is no board's address - give its host, as ?board=192.0.2.39",
+   "ru": "{named} не адрес платы — укажите хост, например ?board=192.0.2.39"
+  },
+  "noContract": {
+   "en": "the board answers with no contract number and this page reads contract {mine} - reload the page from the board, so both come from one kit",
+   "ru": "плата не назвала номер договора, а страница читает договор {mine} — загрузите страницу с платы заново, чтобы обе части были из одного комплекта"
+  },
+  "contractOther": {
+   "en": "the board answers contract {number} and this page reads contract {mine} - reload the page from the board, so both come from one kit",
+   "ru": "плата отвечает по договору {number}, а страница читает договор {mine} — загрузите страницу с платы заново, чтобы обе части были из одного комплекта"
+  },
+  "speaksDictionary": {
+   "en": "the board speaks dictionary {version} and this page reads {mine} - reload the page",
+   "ru": "плата говорит по словарю {version}, а страница читает {mine} — загрузите страницу заново"
+  },
+  "namesNoDictionary": {
+   "en": "the board names no dictionary and this page reads {mine} - reload the page",
+   "ru": "плата не назвала словарь, а страница читает {mine} — загрузите страницу заново"
+  },
+  "noConsole": {
+   "en": "This board serves no console.",
+   "ru": "У платы нет консоли."
+  },
+  "board": {
+   "en": "board",
+   "ru": "плата"
+  },
+  "ownScale": {
+   "en": "own scale",
+   "ru": "своя шкала"
+  },
+  "pace": {
+   "en": "{span} · {ms} a point",
+   "ru": "{span} · {ms} на точку"
+  },
+  "rowBoard": {
+   "en": "board",
+   "ru": "плата"
+  },
+  "rowVersion": {
+   "en": "version",
+   "ru": "версия"
+  },
+  "rowMemory": {
+   "en": "memory",
+   "ru": "память"
+  },
+  "rowUptime": {
+   "en": "uptime",
+   "ru": "работает"
+  },
+  "rowCore": {
+   "en": "core {n}",
+   "ru": "ядро {n}"
+  },
+  "rowTime": {
+   "en": "time",
+   "ru": "время"
+  },
+  "lowMemory": {
+   "en": "little memory left: do not open more tabs, each one costs the board about 4 KB",
+   "ru": "памяти мало: не открывайте больше вкладок, каждая стоит плате около 4 КБ"
+  },
+  "system": {
+   "en": "System",
+   "ru": "Система"
+  },
+  "live": {
+   "en": "Live",
+   "ru": "Вживую"
+  },
+  "window": {
+   "unused": {
+    "en": "not used",
+    "ru": "не используется"
+   },
+   "days": {
+    "daily": {
+     "en": "every day",
+     "ru": "каждый день"
+    },
+    "week": {
+     "en": "working days",
+     "ru": "будни"
+    },
+    "end": {
+     "en": "weekend",
+     "ru": "выходные"
+    },
+    "custom": {
+     "en": "own days",
+     "ru": "свои дни"
+    }
+   },
+   "day": [
+    {
+     "en": "Mon",
+     "ru": "Пн"
+    },
+    {
+     "en": "Tue",
+     "ru": "Вт"
+    },
+    {
+     "en": "Wed",
+     "ru": "Ср"
+    },
+    {
+     "en": "Thu",
+     "ru": "Чт"
+    },
+    {
+     "en": "Fri",
+     "ru": "Пт"
+    },
+    {
+     "en": "Sat",
+     "ru": "Сб"
+    },
+    {
+     "en": "Sun",
+     "ru": "Вс"
+    }
+   ],
+   "kind": {
+    "between": {
+     "en": "from - to",
+     "ru": "с - по"
+    },
+    "every": {
+     "en": "every N hours",
+     "ru": "каждые N часов"
+    }
+   },
+   "from": {
+    "en": "From",
+    "ru": "С"
+   },
+   "to": {
+    "en": "To",
+    "ru": "По"
+   },
+   "start": {
+    "en": "Starting at",
+    "ru": "Начиная с"
+   },
+   "every": {
+    "en": "Every",
+    "ru": "Каждые"
+   },
+   "hours": {
+    "en": "h",
+    "ru": "ч"
+   },
+   "minutes": {
+    "en": "for",
+    "ru": "на"
+   },
+   "min": {
+    "en": "min",
+    "ru": "мин"
+   },
+   "profile_is": {
+    "en": "Profile",
+    "ru": "Профиль"
+   },
+   "profile": {
+    "comfort": {
+     "en": "comfort",
+     "ru": "комфорт"
+    },
+    "eco": {
+     "en": "eco",
+     "ru": "эконом"
+    },
+    "off": {
+     "en": "off",
+     "ru": "выкл"
+    },
+    "none": {
+     "en": "none",
+     "ru": "нет"
+    }
+   },
+   "bad": {
+    "days": {
+     "en": "Pick at least one day",
+     "ru": "Выберите хотя бы один день"
+    },
+    "from": {
+     "en": "Set the start time",
+     "ru": "Укажите время начала"
+    },
+    "to": {
+     "en": "Set the end time",
+     "ru": "Укажите время конца"
+    },
+    "same": {
+     "en": "Start and end are the same time",
+     "ru": "Начало и конец совпадают"
+    },
+    "hours": {
+     "en": "Hours are from 1 to 24",
+     "ru": "Часов - от 1 до 24"
+    },
+    "minutes": {
+     "en": "Minutes are from 1 to the hours between starts",
+     "ru": "Минут - от 1 до числа часов между стартами"
+    }
+   },
+   "between": {
+    "en": "{from} - {to}",
+    "ru": "{from} - {to}"
+   },
+   "every_line": {
+    "en": "{from}, every {every} h for {minutes} min",
+    "ru": "{from}, каждые {every} ч на {minutes} мин"
+   },
+   "starts": {
+    "en": "Starts: {list}",
+    "ru": "Запуски: {list}"
+   }
+  },
+  "sectionTwice": {
+   "en": "This page was put together wrongly: the part \"{key}\" is added twice by the device's scripts.",
+   "ru": "Страница собрана неверно: часть «{key}» добавлена дважды скриптами устройства."
+  },
+  "tabTwice": {
+   "en": "This page was put together wrongly: the tab \"{key}\" is added twice by the device's scripts.",
+   "ru": "Страница собрана неверно: вкладка «{key}» добавлена дважды скриптами устройства."
+  },
+  "noPart": {
+   "en": "The section \"{section}\" asks for the part \"{key}\", which no script of this device added.",
+   "ru": "Раздел «{section}» просит часть «{key}», которую не добавил ни один скрипт устройства."
+  }
+ },
+ "modules": {
+  "system": {
+   "card": {
+    "title": {
+     "en": "System",
+     "ru": "Система"
+    }
+   }
+  }
+ },
+ "tree": {
+  "system": {
+   "sections": [
+    {
+     "id": "time",
+     "title": {
+      "en": "Time and zone",
+      "ru": "Время и пояс"
+     },
+     "settings": [
+      "time",
+      "zone"
+     ]
+    },
+    {
+     "id": "network",
+     "title": {
+      "en": "Network",
+      "ru": "Сеть"
+     },
+     "settings": [
+      "net_point_tries",
+      "net_reset_laps",
+      "net_reboot_laps"
+     ]
+    },
+    {
+     "id": "board",
+     "title": {
+      "en": "Board",
+      "ru": "Плата"
+     },
+     "board": true
+    }
+   ]
+  }
+ },
+ "help": {
+  "title": {
+   "en": "Reference",
+   "ru": "Справочник"
+  },
+  "entries": {
+   "time": {
+    "name": {
+     "en": "Time comes from",
+     "ru": "Откуда время"
+    },
+    "text": {
+     "en": "Auto - the router, and the internet when it is silent; internet - the public servers only; server - the one you name. For the journal and the records.",
+     "ru": "Авто — роутер, а если он молчит, то интернет; интернет — только публичные серверы; сервер — тот, который вы укажете. Нужно журналу и записям."
+    }
+   },
+   "zone": {
+    "name": {
+     "en": "Time zone",
+     "ru": "Часовой пояс"
+    },
+    "text": {
+     "en": "The city the local time and the summer time are counted by.",
+     "ru": "Город, по которому считается местное время и переход на летнее. Список короткий, потому что в нём только то, что нужно устройству."
+    }
+   },
+   "net_point_tries": {
+    "name": {
+     "en": "Failed joins in a row before the next access point",
+     "ru": "Срывов подряд до другой точки"
+    },
+    "text": {
+     "en": "How many joins in a row may fail at one access point of the network before the board leaves it and tries the next strongest one.",
+     "ru": "Сколько раз подряд вход на одной точке сети может сорваться, прежде чем плата оставит её и попробует следующую по силе."
+    }
+   },
+   "net_reset_laps": {
+    "name": {
+     "en": "Laps without a network before the radio is reset",
+     "ru": "Кругов без сети до сброса радио"
+    },
+    "text": {
+     "en": "A lap is every access point of the network tried and left. After this many laps without a network the board resets its radio from scratch.",
+     "ru": "Круг — это когда все точки сети перепробованы и оставлены. После стольких кругов без сети плата сбрасывает радио с нуля."
+    }
+   },
+   "net_reboot_laps": {
+    "name": {
+     "en": "Laps after the reset before the board restarts",
+     "ru": "Кругов после сброса до перезапуска"
+    },
+    "text": {
+     "en": "How many more laps without a network after the radio's reset before the board restarts itself.",
+     "ru": "Сколько ещё кругов без сети после сброса радио, прежде чем плата перезапустится."
+    }
+   }
+  }
+ }
+}

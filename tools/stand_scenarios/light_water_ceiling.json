@@ -1,0 +1,103 @@
+{
+ "about": "The ceiling of the water under a cycle of the room: the room stays at 21.1 (under a target of 22, warm inside its band), a Light at 40 s lights the burner, and the water climbs past its setpoint of 60 (at about 277 s): the cycle ends there with the room still cold, and the fire goes the ordinary way down - it does not burn on to the overheating.",
+ "seconds": 420,
+ "press": [
+  [
+   2,
+   "start"
+  ],
+  [
+   40,
+   "light"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   132,
+   3150
+  ],
+  [
+   133,
+   1800
+  ],
+  [
+   142,
+   1800
+  ],
+  [
+   143,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   62
+  ],
+  [
+   420,
+   62
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   140,
+   30
+  ],
+  [
+   500,
+   120
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   420,
+   56
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   420,
+   50
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   21.1
+  ],
+  [
+   420,
+   21.1
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_asked_by": "room",
+  "auto_room_c": "22",
+  "auto_room_gap_c": "2"
+ }
+}

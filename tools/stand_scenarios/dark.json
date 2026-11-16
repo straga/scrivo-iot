@@ -1,0 +1,40 @@
+{
+ "about": "A start with no flame at any second - the burner passes the purge, three attempts at lighting, burns off with the reason and stands in a fault; from it the page is asked for the thermostat's block in stop, purge, kindling, burning off and fault.",
+ "seconds": 1400,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   1400,
+   3150
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   1400,
+   40
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   20
+  ],
+  [
+   1400,
+   20
+  ]
+ ]
+}

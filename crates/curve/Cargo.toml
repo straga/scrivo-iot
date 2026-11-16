@@ -1,0 +1,5 @@
+[package]
+name = "curve"
+version = "0.1.0"
+edition.workspace = true
+description = "The last N readings of one value, kept in a ring that never grows, and the mean of a run of them"

@@ -1,0 +1,29 @@
+{
+ "modules": {
+  "probe": {
+   "card": {
+    "title": {
+     "en": "the /events probe",
+     "ru": "проба /events"
+    }
+   },
+   "rows": {
+    "changed_at": {
+     "label": {
+      "en": "changed at",
+      "ru": "изменена в"
+     },
+     "says": [
+      [
+       "number",
+       {
+        "en": "{} ms",
+        "ru": "{} мс"
+       }
+      ]
+     ]
+    }
+   }
+  }
+ }
+}

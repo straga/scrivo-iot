@@ -1,0 +1,5 @@
+[package]
+name = "bl0939"
+version = "0.1.0"
+edition.workspace = true
+description = "The BL0939 energy meter of the Sonoff Dual R3: its packet, taken apart without the hardware"

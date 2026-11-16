@@ -1,0 +1,10 @@
+[package]
+name = "shell"
+version = "0.1.0"
+edition = "2021"
+description = "The board's command shell: one table of commands for every byte stream - USB and TCP"
+
+[dependencies]
+embedded-cli = "0.2.1"
+embedded-io = "0.6.1"
+ufmt = "0.2.0"

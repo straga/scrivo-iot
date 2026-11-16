@@ -1,0 +1,18 @@
+[package]
+name = "tasmota"
+version = "0.1.0"
+edition.workspace = true
+description = "A Tasmota socket's energy status read over HTTP: the request the board may send it, the answer taken apart into watts, volts and amps, and the exchange over a TCP socket within a time"
+
+[dependencies]
+edge-nal = { workspace = true }
+embedded-io-async = { workspace = true }
+embassy-time = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+embassy-futures = "0.1"
+embassy-time = { workspace = true, features = ["std", "generic-queue-64"] }
+critical-section = { version = "1", features = ["std"] }
+edge-nal-std = "0.7"

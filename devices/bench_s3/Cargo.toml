@@ -1,0 +1,51 @@
+[package]
+name = "bench_s3"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+description = "Bench S3: network, confirmation, the log and the shell on USB and TCP port 23"
+
+[package.metadata.rust_app]
+board = "STRAGA_BASE_S3"
+
+[[bin]]
+name = "bench_s3"
+harness = false # do not use the built-in cargo test harness -> resolve rust-analyzer errors
+
+[dependencies]
+log = { workspace = true }
+# critical-section: crates/events waits on an embassy_sync Watch with a timeout
+esp-idf-svc = { workspace = true, features = ["critical-section", "embassy-sync"] }
+# the timers of the network loop, the sensors and the desks: the time driver is `between::steady_time`, and its queue has
+# a place per waiting task
+embassy-time = { workspace = true }
+app_desc = { workspace = true }
+firmware = { workspace = true }
+settings = { workspace = true }
+bench_s3_api = { path = "api" }
+module = { workspace = true }
+page = { workspace = true }
+# a direct dependency even without vfs-probe: esp-idf-sys builds the IDF components of the root crate and of its
+# direct dependencies only, and vfs carries app_fs, which firmware needs
+vfs = { workspace = true }
+ways_down = { workspace = true }
+web = { workspace = true }
+
+[features]
+# The rollback check: an image that runs and never confirms itself, so the next reset returns
+# the board to factory. Not for the board's own use.
+never-confirm = ["firmware/never-confirm"]
+# The vfs check: at start, reads what the recovery image wrote to /probe/recovery_wrote.txt into the log
+# and writes /probe/rust_wrote.txt for the recovery image to read. Not for the board's own use.
+vfs-probe = []
+# The /events check: a thing "probe" changes every 7 s and announces it, so a stream shows whether the
+# state leaves at the change or at the next tick. Not for the board's own use.
+events-probe = []
+
+[build-dependencies]
+embuild = { workspace = true }
+dictionary = { workspace = true }
+bench_s3_api = { path = "api" }
+# the flag that puts the panic_note component in front of the chip's panic handler
+fell_where = { workspace = true }
+version = { workspace = true }

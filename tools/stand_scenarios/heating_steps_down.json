@@ -1,0 +1,108 @@
+{
+ "about": "The burner heats the boiler to the setpoint on three steps: Start at 2 s, the flame 20 s after the first dose, the water from 40 \u00b0C at 150 s climbing to 60.5 \u00b0C at 400 s with the setpoint at 60 - the 6 kW step far from it, the 5 kW one from 8 \u00b0C under it (about 300 s), the 3 kW one from 3 \u00b0C under it (about 357 s), and at the setpoint the fire smoulders (the scenario's `auto_smoulder_s`).",
+ "seconds": 700,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ],
+  [
+   700,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   40
+  ],
+  [
+   150,
+   40
+  ],
+  [
+   400,
+   60.5
+  ],
+  [
+   700,
+   60.5
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   100,
+   30
+  ],
+  [
+   250,
+   120
+  ],
+  [
+   700,
+   125
+  ]
+ ],
+ "supply_c": [
+  [
+   0,
+   36
+  ],
+  [
+   300,
+   66
+  ]
+ ],
+ "return_c": [
+  [
+   0,
+   30
+  ],
+  [
+   300,
+   50
+  ]
+ ],
+ "room_c": [
+  [
+   0,
+   18
+  ]
+ ],
+ "settings": {
+  "role_ntc_1": "boiler",
+  "role_ntc_2": "supply",
+  "role_ntc_3": "return",
+  "role_ntc_4": "room",
+  "auto_smoulder_s": "90",
+  "auto_step": "6",
+  "auto_step_mid": "5",
+  "auto_step_small": "3"
+ }
+}

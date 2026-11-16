@@ -1,0 +1,56 @@
+{
+ "about": "Lit as in lighting.json, working from 155 s, and the flue is 66 degrees and climbs a degree a minute: it crosses 70 degrees in four minutes and the work is not given up on (6.6).",
+ "seconds": 900,
+ "press": [
+  [
+   2,
+   "start"
+  ]
+ ],
+ "flame_mv": [
+  [
+   0,
+   3150
+  ],
+  [
+   94,
+   3150
+  ],
+  [
+   95,
+   1800
+  ],
+  [
+   104,
+   1800
+  ],
+  [
+   105,
+   900
+  ]
+ ],
+ "boiler_c": [
+  [
+   0,
+   38
+  ],
+  [
+   900,
+   52
+  ]
+ ],
+ "flue_c": [
+  [
+   0,
+   24
+  ],
+  [
+   155,
+   66
+  ],
+  [
+   900,
+   78.41666666666667
+  ]
+ ]
+}
